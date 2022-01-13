@@ -5,13 +5,11 @@ import networkx as nx
 import plotly.express as px
 import plotly.graph_objects as go
 
-from Utilities.corr_matrix import *
-
 def create_graph(corr_matrix):
     corr_matrix.columns = ["asset_1", "asset_2", "correlation"]
     
     # create a new graph from edge list
-    Gx = nx.from_pandas_edgelist(edges, "asset_1", "asset_2", edge_attr=["correlation"])
+    Gx = nx.from_pandas_edgelist(corr_matrix, "asset_1", "asset_2", edge_attr=["correlation"])
 
     # Remove Nodes that are isolated
     Gx.remove_nodes_from(list(nx.isolates(Gx)))
@@ -61,19 +59,19 @@ def get_node_size(Gx):
         
     return node_size
 
-def get_coordinates(G):
+def get_coordinates(Gx):
     """Returns the positions of nodes and edges in a format
     for Plotly to draw the network
     """
     # get list of node positions
-    pos = nx.fruchterman_reingold_layout(G)
+    pos = nx.fruchterman_reingold_layout(Gx)
 
-    Xnodes = [pos[n][0] for n in G.nodes()]
-    Ynodes = [pos[n][1] for n in G.nodes()]
+    Xnodes = [pos[n][0] for n in Gx.nodes()]
+    Ynodes = [pos[n][1] for n in Gx.nodes()]
 
     Xedges = []
     Yedges = []
-    for e in mst.edges():
+    for e in Gx.edges():
         # x coordinates of the nodes defining the edge e
         Xedges.extend([pos[e[0]][0], pos[e[1]][0], None])
         Yedges.extend([pos[e[0]][1], pos[e[1]][1], None])
