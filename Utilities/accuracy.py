@@ -1,4 +1,8 @@
-from sklearn.model_selection import train_test_split, cross_val_score, KFold
+import numpy as np
+import pandas as pd
+
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split, KFold
 
 def get_acc_score(X, Y, clf):
 
