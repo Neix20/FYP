@@ -25,7 +25,7 @@ def get_acc_score_kcv(X, Y, clf):
 
     # K-Fold Cross Validation
     kf = KFold(n_splits=10, shuffle=True)
-    cv = kf.split(df_X)
+    cv = kf.split(X)
 
     acc = 0
 
@@ -38,3 +38,9 @@ def get_acc_score_kcv(X, Y, clf):
     acc = float(acc) / 10
 
     return acc
+
+def feature_importance(X, clf):
+    feats = {key:val for (key,val) in zip(X.columns, clf.feature_importances_)}
+    importances = pd.DataFrame.from_dict(feats, orient='index').rename(columns={0: 'Gini-importance'})
+    importances.sort_values(by='Gini-importance', inplace = True, ascending = False)
+    return importances
