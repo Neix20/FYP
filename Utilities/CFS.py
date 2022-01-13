@@ -2,7 +2,7 @@ import math
 import numpy as np
 import pandas as pd
 
-from HeapQueue import *
+from Utilities.HeapQueue import *
 
 # Calculate Merit
 def merit_calculation(X, Y, func):
@@ -47,7 +47,7 @@ def CFS(X, Y, func, n_selected_features = 10):
     queue = HeapQueue()
     
     # Calculate Best Feature and Best Value
-    best_feature, best_value = get_best_feature_val(X, Y, pointbiserialr)
+    best_feature, best_value = get_best_feature_val(X, Y, func)
     
     # push first best_subset, merit
     queue.push([best_feature], best_value)
@@ -56,7 +56,7 @@ def CFS(X, Y, func, n_selected_features = 10):
     visited = []
     
     # counter for backtracks, limit of backtracks
-    max_backtrack, n_backtrack = 5, 0
+    max_backtrack, n_backtrack = 25, 0
     
     # repeat until queue is empty
     # or the maximum number of backtracks is reached
@@ -85,7 +85,7 @@ def CFS(X, Y, func, n_selected_features = 10):
         
             if not temp_subset in visited:
                 visited.append(temp_subset)
-                merit = merit_calculation(df_X.iloc[:, temp_subset], df_Y, func)
+                merit = merit_calculation(X.iloc[:, temp_subset], Y, func)
                 queue.push(temp_subset, merit)
                 
     # Sort Feature Set
