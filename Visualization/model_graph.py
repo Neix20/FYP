@@ -20,7 +20,6 @@ def pfr_graph(df, x_label, y_label, title):
         title = {
             'text': title,
             'x':0.5,
-            "y": 0.85,
             'xanchor': 'center'
         },
         xaxis_title=x_label,
