@@ -6,12 +6,18 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 
-def create_graph(corr_matrix):
-    corr_matrix.columns = ["asset_1", "asset_2", "correlation"]
+def create_graph(corr_matrix, threshold):
+    corr_matrix = corr_matrix.stack().reset_index()
+    corr_matrix.columns = ["Var A", "Var B", "correlation"]
+
+    # Retain Features where correlation is above threshold
+    corr_matrix = corr_matrix.loc[abs(corr_matrix["correlation"]) >= threshold]
+
+    # Remove Features that are Same
+    corr_matrix = corr_matrix.loc[corr_matrix["Var A"] != corr_matrix["Var B"]]
 
     # create a new graph from edge list
-    Gx = nx.from_pandas_edgelist(
-        corr_matrix, "asset_1", "asset_2", edge_attr=["correlation"])
+    Gx = nx.from_pandas_edgelist(corr_matrix, "Var A", "Var B", edge_attr=["correlation"])
 
     # Remove Nodes that are isolated
     Gx.remove_nodes_from(list(nx.isolates(Gx)))
@@ -87,10 +93,46 @@ def get_coordinates(Gx):
 
     return Xnodes, Ynodes, Xedges, Yedges
 
+def get_top_and_bottom_three(df):
+    """
+    get a list of the top 3 and bottom 3 most/least correlated assests
+    for each node.
 
-def network_graph(corr_matrix, title):
+    Args:
+        df (pd.DataFrame): pandas correlation matrix
+
+    Returns:
+        top_3_list (list): list of lists containing the top 3 correlations
+            (name and value)
+        bottom_3_list (list): list of lists containing the bottom three
+            correlations (name and value)
+    """
+
+    top_3_list, bottom_3_list = [], []
+
+    for col in df.columns:
+
+        # exclude self correlation #reverse order of the list returned
+        top_3 = list(np.argsort(abs(df.loc[:, col]))[-4:-1][::-1])
+        # bottom 3 list is returned in correct order
+        bottom_3 = list(np.argsort(abs(df.loc[:, col]))[:3])
+
+        # get column index
+        col_index = df.columns.get_loc(col)
+
+        # find values based on index locations
+        top_3_values = [f"{df.index[ind]}: {df.iloc[ind, col_index]:.2f}" for ind in top_3]
+        bottom_3_values = [f"{df.index[ind]}: {df.iloc[ind, col_index]:.2f}" for ind in bottom_3]
+
+        top_3_list.append("<br>".join(top_3_values)+"<br>")
+        bottom_3_list.append("<br>".join(bottom_3_values)+"<br>")
+
+    return top_3_list, bottom_3_list
+
+
+def network_graph(corr_matrix, title, threshold = 0.75):
     # Create Basic Graph from Correlation Matrix
-    Gx = create_graph(corr_matrix)
+    Gx = create_graph(corr_matrix, threshold)
 
     # Make Graph into Minimum Spanning Tree
     mst = nx.minimum_spanning_tree(Gx)
@@ -106,6 +148,11 @@ def network_graph(corr_matrix, title):
 
     # get coordinates for nodes and edges
     Xnodes, Ynodes, Xedges, Yedges = get_coordinates(mst)
+    
+    # Description
+    top_3_list, bottom_3_list = get_top_and_bottom_three(corr_matrix)
+    
+    description = [f"<b>{node}</b><br>Strongest Correlation With: <br>{top_3_list[ind]}<br>Weakest Correlation With: <br>{bottom_3_list[ind]}" for ind, node in enumerate(node_label)]
 
     # edges
     tracer = go.Scatter(
@@ -125,6 +172,8 @@ def network_graph(corr_matrix, title):
         textposition="top center",
         marker=dict(size=node_size, line=dict(width=1), color=edge_color),
         text=node_label,
+        hoverinfo="text",
+        hovertext=description,
         textfont=dict(size=7),
         showlegend=False,
     )

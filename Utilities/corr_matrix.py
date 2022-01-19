@@ -7,10 +7,6 @@ def pairwise_correlation(df, func):
     
     arr_list = []
     
-#     for col_a in columns:
-#         corr, p_val = func(df.iloc[:, col_a], df.iloc[:, col_a])
-#         arr_list.append([col_a, col_a, corr])
-    
     for col_a, col_b in itr.combinations(columns, 2):
         corr, p_val = func(df.iloc[:, col_a], df.iloc[:, col_b])
         arr_list.append([col_a, col_b, corr])

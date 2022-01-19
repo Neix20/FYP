@@ -73,7 +73,7 @@ def CFS(X, Y, func, n_selected_features = 10):
             n_backtrack += 1
 
         # goal condition
-        if len(best_subset) == n_selected_features or n_backtrack == max_backtrack:
+        if len(best_subset) == n_selected_features + 1 or n_backtrack == max_backtrack:
             break
     
         # iterate through all features and look of one can

@@ -3,6 +3,17 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+def cmp_result_tbl(clf_report_arr, col_name):
+    name_arr, arr_list = [], []
+    for name, clf_report, mcc in clf_report_arr:
+        arr_list.append(clf_report.loc[col_name.lower()][:-1].tolist() + [mcc])
+        name_arr.append(name)
+        
+    df = pd.DataFrame(arr_list, columns = ["Precision", "Recall", "F1-Score", "MCC"])
+    df.index = name_arr
+    
+    return df
+
 def get_df_type(clf_report_arr, col_name):
     df = pd.DataFrame()
 
@@ -36,7 +47,7 @@ def prc_roc_graph(model_arr, X, Y, x_cor, title, x_title, y_title, func):
     
     for name, model in model_arr:
         yhat = model.predict_proba(X)
-        yhat = yhat[:, 1]
+        yhat = yhat[:, -1]
         a, b, c = func(Y, yhat)
         if x_cor == [1, 0]:
             x_val, y_val = b, a
