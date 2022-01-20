@@ -1,0 +1,31 @@
+Install Necessary Programs Android Studio
+
+Jupyter notebook
+Ranking of Features using Chi Square, Info Gain, Gain Ratio, RelieF algorithm
+Compare with Wrapper Methods
+Decision Tree Graph Analysis
+
+Report
+Chapter 4
+What are moderator Variables?
+
+Descriptive Analysis
+- Compare Education Level with Trust
+
+Correlation Analysis
+- Pearson Correlation
+- Spearman Correlation
+- Correlation Network Graph
+
+History
+Definition
+Formula
+Explanation of Formula
+
+Feature Selection Techniques
+
+Experiment Results
+
+
+
+
