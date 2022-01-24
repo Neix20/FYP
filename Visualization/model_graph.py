@@ -3,6 +3,44 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+def show_bar_graph(df, title = "", x_title = "", y_title = "", y_axis_title = ""):
+    fig = go.Figure()
+    
+    for name in df.index:
+        fig.add_trace(go.Bar(name = name, x = df.columns, y = df.loc[name, :]))
+        
+    fig.update_traces(
+        texttemplate='%{value}', 
+        textposition='outside'
+    )
+    
+    fig.update_layout(
+        xaxis_title = x_title,
+        yaxis_title = y_axis_title,
+        legend_title = y_title,
+    )
+
+    return fig
+
+def show_bar_graph_percentage(df, title = "", x_title = "", y_title = "", y_axis_title = ""):
+    fig = go.Figure()
+    
+    for name in df.index:
+        fig.add_trace(go.Bar(name = name, x = df.columns, y = df.loc[name, :]))
+        
+    fig.update_traces(
+        texttemplate='%{value:.2f}%', 
+        textposition='outside'
+    )
+    
+    fig.update_layout(
+        xaxis_title = x_title,
+        yaxis_title = y_axis_title,
+        legend_title = y_title,
+    )
+
+    return fig
+
 def cmp_result_tbl(clf_report_arr, col_name):
     name_arr, arr_list = [], []
     for name, clf_report, mcc in clf_report_arr:

@@ -79,7 +79,7 @@ def get_coordinates(Gx):
     for Plotly to draw the network
     """
     # get list of node positions
-    pos = nx.fruchterman_reingold_layout(Gx)
+    pos = nx.circular_layout(Gx)
 
     Xnodes = [pos[n][0] for n in Gx.nodes()]
     Ynodes = [pos[n][1] for n in Gx.nodes()]
