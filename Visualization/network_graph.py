@@ -74,12 +74,12 @@ def get_node_size(Gx, size):
     return node_size
 
 
-def get_coordinates(Gx):
+def get_coordinates(Gx, func):
     """Returns the positions of nodes and edges in a format
     for Plotly to draw the network
     """
     # get list of node positions
-    pos = nx.circular_layout(Gx)
+    pos = func(Gx)
 
     Xnodes = [pos[n][0] for n in Gx.nodes()]
     Ynodes = [pos[n][1] for n in Gx.nodes()]
@@ -130,7 +130,7 @@ def get_top_and_bottom_three(df):
     return top_3_list, bottom_3_list
 
 
-def network_graph(corr_matrix, title, threshold = 0.75):
+def network_graph(corr_matrix, title, func, threshold = 0.75):
     # Create Basic Graph from Correlation Matrix
     Gx = create_graph(corr_matrix, threshold)
 
@@ -147,7 +147,7 @@ def network_graph(corr_matrix, title, threshold = 0.75):
     node_label = list(mst.nodes())
 
     # get coordinates for nodes and edges
-    Xnodes, Ynodes, Xedges, Yedges = get_coordinates(mst)
+    Xnodes, Ynodes, Xedges, Yedges = get_coordinates(mst, func)
     
     # Description
     top_3_list, bottom_3_list = get_top_and_bottom_three(corr_matrix)
