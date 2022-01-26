@@ -76,7 +76,7 @@ def pfr_graph(df, x_label, y_label, title):
         legend_title="Legend",
     )
     fig.update_yaxes(range=[0, 1])
-    fig.show("notebook")
+    return fig
     
 def prc_roc_graph(model_arr, X, Y, x_cor, title, x_title, y_title, func):
     # Empty Plot
@@ -114,7 +114,7 @@ def prc_roc_graph(model_arr, X, Y, x_cor, title, x_title, y_title, func):
     
     fig.update_xaxes(range=[0,1])
     fig.update_yaxes(range=[0,1])
-    fig.show("notebook")
+    return fig
     
 def acc_graph(acc_arr, title, x_title, y_title):
     # Empty Plots
@@ -147,4 +147,4 @@ def acc_graph(acc_arr, title, x_title, y_title):
         legend_title = "Legend",
     )
     fig.update_xaxes(range=[0,100])
-    fig.show("notebook")
+    return fig

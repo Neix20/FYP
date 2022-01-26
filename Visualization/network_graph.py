@@ -17,7 +17,8 @@ def create_graph(corr_matrix, threshold):
     corr_matrix = corr_matrix.loc[corr_matrix["Var A"] != corr_matrix["Var B"]]
 
     # create a new graph from edge list
-    Gx = nx.from_pandas_edgelist(corr_matrix, "Var A", "Var B", edge_attr=["correlation"])
+    Gx = nx.from_pandas_edgelist(
+        corr_matrix, "Var A", "Var B", edge_attr=["correlation"])
 
     # Remove Nodes that are isolated
     Gx.remove_nodes_from(list(nx.isolates(Gx)))
@@ -59,7 +60,7 @@ def get_edge_color(Gx):
     edge_colours = []
 
     for key, value in nx.get_edge_attributes(Gx, "correlation").items():
-        edge_colours.append(assign_colour(value,))
+        edge_colours.append(assign_colour(value))
 
     return edge_colours
 
@@ -93,6 +94,7 @@ def get_coordinates(Gx, func):
 
     return Xnodes, Ynodes, Xedges, Yedges
 
+
 def get_top_and_bottom_three(df):
     """
     get a list of the top 3 and bottom 3 most/least correlated assests
@@ -121,8 +123,10 @@ def get_top_and_bottom_three(df):
         col_index = df.columns.get_loc(col)
 
         # find values based on index locations
-        top_3_values = [f"{df.index[ind]}: {df.iloc[ind, col_index]:.2f}" for ind in top_3]
-        bottom_3_values = [f"{df.index[ind]}: {df.iloc[ind, col_index]:.2f}" for ind in bottom_3]
+        top_3_values = [
+            f"{df.index[ind]}: {df.iloc[ind, col_index]:.2f}" for ind in top_3]
+        bottom_3_values = [
+            f"{df.index[ind]}: {df.iloc[ind, col_index]:.2f}" for ind in bottom_3]
 
         top_3_list.append("<br>".join(top_3_values)+"<br>")
         bottom_3_list.append("<br>".join(bottom_3_values)+"<br>")
@@ -130,7 +134,7 @@ def get_top_and_bottom_three(df):
     return top_3_list, bottom_3_list
 
 
-def network_graph(corr_matrix, title, func, threshold = 0.75):
+def network_graph(corr_matrix, title, func, threshold=0.75):
     # Create Basic Graph from Correlation Matrix
     Gx = create_graph(corr_matrix, threshold)
 
@@ -141,25 +145,26 @@ def network_graph(corr_matrix, title, func, threshold = 0.75):
     edge_color = get_edge_color(mst)
 
     # Get Node Size
-    node_size = get_node_size(mst, 5)
+    node_size = get_node_size(mst, 8)
 
     # Get Node Labels
     node_label = list(mst.nodes())
 
     # get coordinates for nodes and edges
     Xnodes, Ynodes, Xedges, Yedges = get_coordinates(mst, func)
-    
+
     # Description
     top_3_list, bottom_3_list = get_top_and_bottom_three(corr_matrix)
-    
-    description = [f"<b>{node}</b><br>Strongest Correlation With: <br>{top_3_list[ind]}<br>Weakest Correlation With: <br>{bottom_3_list[ind]}" for ind, node in enumerate(node_label)]
+
+    description = [
+        f"<b>{node}</b><br>Strongest Correlation With: <br>{top_3_list[ind]}<br>Weakest Correlation With: <br>{bottom_3_list[ind]}" for ind, node in enumerate(node_label)]
 
     # edges
     tracer = go.Scatter(
         x=Xedges,
         y=Yedges,
         mode="lines",
-        line=dict(color="#DCDCDC", width=1),
+        line=dict(color="#DCDCDC", width = 3),
         hoverinfo="none",
         showlegend=False,
     )
@@ -174,35 +179,26 @@ def network_graph(corr_matrix, title, func, threshold = 0.75):
         text=node_label,
         hoverinfo="text",
         hovertext=description,
-        textfont=dict(size=7),
+        textfont = dict(size=15),
         showlegend=False,
-    )
-
-    axis_style = dict(
-        title="",
-        titlefont=dict(size=20),
-        showgrid=False,
-        zeroline=False,
-        showline=False,
-        ticks="",
-        showticklabels=False,
     )
 
     layout = dict(
-        title=title,
-        width=800,
-        height=800,
-        autosize=False,
-        showlegend=False,
-        xaxis=axis_style,
-        yaxis=axis_style,
-        hovermode="closest",
-        plot_bgcolor="#fff",
+        title = title,
+        width = 800,
+        height = 800,
+        hovermode = "closest",
+        plot_bgcolor = "#fff",
     )
 
     fig = go.Figure()
     fig.add_trace(tracer)
     fig.add_trace(tracer_marker)
     fig.update_layout(layout)
-
-    fig.show()
+    
+    # Hide X Axes
+    fig.update_xaxes(visible=False)
+    
+    # Hide Y Axes
+    fig.update_yaxes(visible=False)
+    return fig
