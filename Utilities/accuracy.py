@@ -42,5 +42,5 @@ def get_acc_score_kcv(X, Y, clf):
 def feature_importance(X, clf):
     feats = {key:val for (key,val) in zip(X.columns, clf.feature_importances_)}
     importances = pd.DataFrame.from_dict(feats, orient='index').rename(columns={0: 'Gini-importance'})
-    importances.sort_values(by='Gini-importance', inplace = True, ascending = False)
+    importances.sort_values(by='Gini-importance', inplace = True, ascending = True)
     return importances

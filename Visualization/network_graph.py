@@ -157,7 +157,8 @@ def network_graph(corr_matrix, title, func, threshold=0.75):
     top_3_list, bottom_3_list = get_top_and_bottom_three(corr_matrix)
 
     description = [
-        f"<b>{node}</b><br>Strongest Correlation With: <br>{top_3_list[ind]}<br>Weakest Correlation With: <br>{bottom_3_list[ind]}" for ind, node in enumerate(node_label)]
+        f"<b>{node}</b><br>Strongest Correlation With: <br>{top_3_list[ind]}<br>Weakest Correlation With: <br>{bottom_3_list[ind]}" for ind, node in enumerate(node_label)
+    ]
 
     # edges
     tracer = go.Scatter(
