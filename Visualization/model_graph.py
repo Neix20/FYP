@@ -43,11 +43,11 @@ def show_bar_graph_percentage(df, title = "", x_title = "", y_title = "", y_axis
 
 def cmp_result_tbl(clf_report_arr, col_name):
     name_arr, arr_list = [], []
-    for name, clf_report, mcc in clf_report_arr:
-        arr_list.append(clf_report.loc[col_name.lower()][:-1].tolist() + [mcc])
+    for name, clf_report, mcc, time in clf_report_arr:
+        arr_list.append(clf_report.loc[col_name.lower()][:-1].tolist() + [mcc, time])
         name_arr.append(name)
         
-    df = pd.DataFrame(arr_list, columns = ["Precision", "Recall", "F1-Score", "MCC"])
+    df = pd.DataFrame(arr_list, columns = ["Precision", "Recall", "F1-Score", "MCC", "Time Taken"])
     df.index = name_arr
     
     return df

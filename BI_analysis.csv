@@ -1,0 +1,287 @@
+Age,Gender,Marital Status,Education Level,Work Industry,Work Position,PE1,PE2,PE3,PE4,EE1,EE2,EE3,EE4,AT1,AT2,AT3,AT4,SI1,SI2,SI3,SI4,FC1,FC2,FC3,FC4,SE1,SE2,SE3,SE4,AX1,AX2,AX3,AX4,T1,T2,T3,T4,BI1,BI2,BI3,BI4,Have you ever purchased anything using the E-payment mode?
+< 25 years,Female,Single,College/university,Banking / Finance,Other,1,1,1,1,2,2,2,2,3,3,3,2,2,2,3,2,1,1,2,1,1,3,3,3,2,3,3,2,1,0,1,2,2,2,2,2,1
+< 25 years,Female,Single,College/university,Other,Other,0,0,0,0,0,0,0,0,2,2,2,2,0,0,2,2,0,0,2,0,0,0,0,0,4,4,3,3,1,1,1,1,1,1,1,1,1
+41 - 55 years,Female,Single,College/university,Manufacturing,Middle management,3,4,3,4,2,1,1,1,3,3,3,3,2,2,1,2,2,1,1,2,1,2,2,3,2,3,3,2,2,2,2,3,2,3,3,3,1
+< 25 years,Male,Single,College/university,Education,Other,2,2,2,2,1,2,2,2,3,2,2,2,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,2,2,0
+< 25 years,Female,Single,College/university,Other,Other,2,2,3,3,2,3,2,3,4,3,3,3,1,2,1,2,1,2,2,2,3,3,3,2,4,3,3,3,2,3,3,3,3,4,3,3,1
+26 - 40 years,Male,Married,College/university,Healthcare,Professional,3,2,2,2,3,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,1,2,2,2,3,3,2,3,2,2,2,2,2,2,2,2,1
+above 55 years,Male,Married,College/university,Banking / Finance,Middle management,4,4,4,4,4,4,4,4,4,4,4,4,2,2,2,0,0,4,0,4,4,4,4,4,0,0,0,0,4,4,4,4,4,4,4,4,1
+above 55 years,Male,Married,Graduate school,Other,Top management,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,4,4,0,0,0,0,0,0,0,0,1
+above 55 years,Male,Married,College/university,Banking / Finance,Professional,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,4,4,4,4,0,0,0,4,0,0,0,0,1
+26 - 40 years,Male,Married,Graduate school,Education,Top management,0,1,0,0,1,0,0,0,3,3,2,1,0,0,0,0,1,1,1,1,1,0,0,1,0,2,2,1,1,1,1,1,2,1,1,1,1
+41 - 55 years,Male,Married,Secondary/High school,Other,Other,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1
+< 25 years,Female,Single,Graduate school,Other,Other,3,2,3,3,2,2,1,1,3,3,3,2,2,3,3,2,2,1,2,3,1,3,3,3,3,4,3,3,2,2,2,2,3,3,3,3,1
+26 - 40 years,Female,Single,College/university,Other,Other,1,1,1,2,0,0,0,0,0,1,0,1,1,2,2,1,2,1,1,2,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1
+41 - 55 years,Male,Married,College/university,Healthcare,Professional,4,4,4,4,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,0
+41 - 55 years,Female,Other,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+above 55 years,Female,Married,Primary school,Education,Other,2,2,2,2,2,2,2,2,2,2,2,3,0,1,0,1,0,1,1,1,0,0,0,0,2,2,2,2,2,2,2,2,3,1,2,2,1
+26 - 40 years,Female,Married,Secondary/High school,Other,Other,4,4,4,4,2,2,2,3,1,1,2,2,3,1,2,1,2,1,1,2,2,0,0,3,2,0,2,2,1,0,2,1,1,2,4,3,0
+26 - 40 years,Male,Single,College/university,Other,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,4,4,0,0,0,0,0,0,0,0,1
+26 - 40 years,Female,Married,Secondary/High school,Education,Other,2,3,2,2,2,2,3,2,1,3,2,2,3,2,2,1,2,2,3,2,1,2,3,2,2,2,2,2,2,2,2,2,1,1,2,2,1
+26 - 40 years,Male,Married,College/university,Other,Other,1,1,1,2,1,1,1,2,2,2,2,1,3,1,2,2,1,1,2,2,1,1,1,1,2,3,3,2,1,1,1,3,2,2,2,2,1
+< 25 years,Male,Single,Primary school,Other,Other,2,2,2,2,1,3,3,3,3,2,2,2,2,3,3,2,2,2,3,3,3,2,2,2,2,2,2,2,3,2,3,2,4,3,1,2,0
+41 - 55 years,Male,Married,Secondary/High school,Other,Professional,4,4,4,4,2,2,2,2,4,4,4,4,4,4,4,4,2,2,2,2,4,4,4,4,2,2,2,2,4,4,4,4,4,4,4,4,0
+< 25 years,Male,Single,Secondary/High school,Education,Other,2,2,4,2,3,3,3,2,2,3,2,4,4,2,2,3,1,3,3,2,3,1,2,3,2,3,2,3,4,2,3,2,2,3,2,3,0
+< 25 years,Male,Married,Secondary/High school,Education,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,Primary school,Education,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+41 - 55 years,Male,Married,Other,Education,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+41 - 55 years,Female,Married,Secondary/High school,Education,Other,2,2,2,2,2,0,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,1,1,2,2,2,2,1,2,0
+above 55 years,Female,Married,Primary school,Education,Other,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+above 55 years,Female,Married,Secondary/High school,Other,Other,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+41 - 55 years,Male,Married,College/university,Manufacturing,Middle management,3,3,3,3,3,2,2,2,3,3,2,2,3,2,3,3,2,2,2,2,3,2,1,1,2,4,4,2,1,1,2,3,2,3,3,3,1
+41 - 55 years,Male,Married,Secondary/High school,Other,Other,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+26 - 40 years,Male,Married,College/university,Education,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,3,2,2,2,2,2,2,2,2,3,0
+41 - 55 years,Female,Married,Other,Other,Top management,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,2,2,3,3,4,4,4,2,2,2,2,2,4,3,2,2,3,4,1
+41 - 55 years,Female,Married,Secondary/High school,Other,Junior management,4,4,3,3,2,2,2,2,4,4,2,2,2,2,3,3,3,2,2,3,3,3,3,3,2,2,3,2,2,2,2,2,4,4,4,4,1
+26 - 40 years,Male,Single,College/university,Banking / Finance,Professional,2,2,2,2,1,1,2,2,2,2,2,2,2,1,3,2,2,2,2,2,2,1,1,2,2,2,2,2,1,1,1,1,2,2,2,2,1
+above 55 years,Male,Married,College/university,Other,Junior management,3,4,4,3,2,2,2,1,3,4,3,2,3,2,3,2,1,0,2,2,1,3,2,2,2,4,4,3,2,3,3,3,2,3,3,3,0
+41 - 55 years,Female,Single,Graduate school,Education,Professional,1,1,1,1,1,1,1,1,1,1,1,1,3,3,3,3,3,3,3,3,3,3,2,3,3,2,3,2,3,2,3,3,3,3,3,3,1
+41 - 55 years,Male,Married,College/university,Education,Junior management,3,3,3,3,2,2,2,2,3,2,2,2,1,1,3,2,1,1,2,3,3,2,3,3,3,4,2,2,3,3,3,3,2,2,3,4,1
+41 - 55 years,Female,Married,Secondary/High school,Other,Middle management,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+41 - 55 years,Male,Single,College/university,Other,Professional,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,3,3,4,1,2,2,2,4,0,0,0,4,4,4,4,4,4,4,4,1
+41 - 55 years,Male,Other,College/university,Other,Professional,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,4,2,2,2,2,3,3,3,3,2,0,4,4,3,4,4,4,4,4,1
+41 - 55 years,Male,Married,Secondary/High school,Education,Other,3,2,3,2,3,3,3,2,2,3,2,3,3,3,3,2,3,3,3,2,3,3,2,3,2,3,3,2,3,2,3,2,2,2,3,2,0
+above 55 years,Female,Married,Primary school,Other,Junior management,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,4,3,4,0,0,0,0,0,0,0,0
+41 - 55 years,Female,Other,College/university,Education,Top management,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,1
+26 - 40 years,Female,Single,College/university,Other,Professional,3,4,4,4,3,3,3,4,4,3,3,3,2,3,3,3,4,4,3,3,2,2,3,3,3,2,2,3,3,3,3,2,3,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,3,3,0,0,0,0,0,0,0,0,1
+< 25 years,Male,Single,College/university,Other,Other,3,3,3,3,3,3,4,4,4,4,3,2,2,2,2,2,2,1,3,2,2,3,3,3,4,4,3,4,2,2,4,2,3,2,4,4,1
+41 - 55 years,Male,Married,Graduate school,Other,Other,0,2,2,2,2,2,3,3,3,3,2,2,2,2,2,2,0,1,1,2,3,3,3,3,3,4,4,4,1,1,1,2,2,3,3,2,1
+41 - 55 years,Male,Single,Graduate school,Education,Professional,1,1,1,2,1,2,1,1,1,1,2,2,2,2,3,3,2,2,3,3,2,2,1,2,2,2,2,2,2,2,2,2,1,1,2,2,1
+41 - 55 years,Male,Married,Secondary/High school,Other,Other,3,3,3,2,2,2,3,3,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,3,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Banking / Finance,Middle management,3,3,3,1,3,2,3,2,3,2,2,3,3,1,3,2,1,2,2,2,2,3,3,3,3,3,2,1,3,2,2,3,3,3,3,3,1
+26 - 40 years,Male,Single,Graduate school,Other,Professional,3,3,3,2,3,2,3,2,3,2,2,2,2,3,2,3,3,3,3,3,3,3,3,3,3,2,2,2,3,2,2,2,3,3,3,3,1
+26 - 40 years,Male,Married,College/university,Education,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+41 - 55 years,Male,Other,College/university,Other,Middle management,3,3,3,3,2,3,3,2,3,3,3,3,3,3,3,3,2,2,3,2,3,3,3,3,1,1,1,1,3,3,3,3,3,3,3,3,1
+41 - 55 years,Female,Married,Secondary/High school,Other,Junior management,2,2,2,2,1,1,1,1,2,2,1,1,2,2,2,2,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,1,2,2,2,2,1
+41 - 55 years,Female,Married,College/university,Other,Top management,2,3,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+41 - 55 years,Female,Married,Other,Other,Other,2,1,2,3,2,2,1,1,4,2,1,1,2,1,3,3,4,2,2,1,2,2,2,2,2,2,2,4,2,1,1,2,3,3,3,3,0
+26 - 40 years,Male,Single,College/university,Other,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,4,4,4,0,0,0,0,0,0,0,0,0
+26 - 40 years,Male,Single,College/university,Manufacturing,Middle management,3,3,3,2,4,2,4,4,3,2,3,4,4,4,4,4,4,4,4,4,3,1,2,2,4,2,4,3,4,3,3,3,3,2,3,4,1
+above 55 years,Female,Married,College/university,Other,Professional,2,2,2,2,1,1,1,1,2,3,2,1,3,3,2,1,1,1,1,2,1,2,1,2,1,1,1,1,1,1,1,2,2,2,1,2,1
+41 - 55 years,Male,Married,Graduate school,Retail / Hypermarket,Top management,1,0,0,1,1,0,1,0,1,1,0,2,2,1,4,1,1,0,2,1,1,2,3,3,0,3,4,4,1,0,2,4,3,3,3,3,1
+41 - 55 years,Male,Married,College/university,Other,Top management,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1
+41 - 55 years,Male,Married,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,College/university,Banking / Finance,Junior management,2,2,2,2,2,2,2,2,3,3,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,1
+26 - 40 years,Male,Married,Graduate school,Manufacturing,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Married,College/university,Manufacturing,Professional,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+26 - 40 years,Male,Married,College/university,Manufacturing,Middle management,1,2,2,2,2,2,2,2,2,1,1,2,1,1,3,1,1,1,2,2,3,3,3,3,3,4,4,3,2,2,2,2,1,1,1,1,1
+26 - 40 years,Female,Single,College/university,Banking / Finance,Middle management,2,2,1,2,2,2,1,2,2,1,2,3,2,2,2,1,3,2,2,2,2,2,3,2,2,2,2,2,1,1,1,2,2,2,2,2,0
+26 - 40 years,Female,Married,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+26 - 40 years,Female,Single,College/university,Manufacturing,Other,4,4,4,4,3,4,4,4,4,4,4,4,4,4,4,4,1,2,2,2,4,4,4,4,0,0,0,0,4,4,4,4,4,4,4,4,1
+41 - 55 years,Male,Married,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Secondary/High school,Other,Middle management,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,2,1,1,2,3,2,2,2,2,2,2,2,1,2,2,2,2,2,3,2,0
+41 - 55 years,Male,Married,Other,Other,Professional,2,2,2,2,2,2,2,2,2,3,2,2,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,3,3,3,3,3,2,2,3,2,1
+< 25 years,Female,Single,Secondary/High school,Manufacturing,Middle management,3,3,3,3,2,2,2,3,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,1
+26 - 40 years,Female,Married,College/university,Other,Middle management,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Single,Secondary/High school,Other,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+26 - 40 years,Male,Single,College/university,Other,Other,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,1,1,1,3,3,3,3,3,3,3,3,0
+26 - 40 years,Male,Married,College/university,Other,Middle management,3,3,3,3,3,1,1,1,4,3,3,3,3,3,3,3,2,2,0,1,2,2,3,3,3,3,4,2,1,1,1,2,2,2,2,2,1
+26 - 40 years,Female,Married,College/university,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,2,1,1,1,1,1,3,3,4,2,1,1,2,2,1,1,1,1,1
+above 55 years,Female,Married,College/university,Education,Professional,2,2,1,1,2,1,2,1,2,1,1,2,3,1,2,2,2,1,2,3,1,3,2,3,2,4,4,3,1,2,2,4,2,1,2,2,1
+26 - 40 years,Male,Single,Graduate school,Banking / Finance,Middle management,3,3,2,1,3,2,3,2,3,2,2,3,3,3,1,2,3,3,2,2,3,2,3,3,3,2,1,1,3,2,2,3,3,4,3,3,1
+26 - 40 years,Male,Single,College/university,Other,Professional,3,3,2,1,3,3,2,2,3,2,2,3,3,3,2,2,2,3,3,3,2,3,2,3,3,2,2,1,3,2,2,3,4,4,3,3,1
+26 - 40 years,Female,Married,College/university,Other,Middle management,3,2,1,1,3,2,3,2,3,2,1,3,1,2,1,2,3,3,2,2,2,3,2,3,2,2,2,2,3,2,2,3,3,3,2,2,1
+41 - 55 years,Female,Married,College/university,Education,Other,0,0,1,2,2,3,3,3,3,3,3,3,1,1,1,1,2,2,2,2,3,3,3,3,2,2,1,1,3,3,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,Graduate school,Education,Professional,3,2,1,1,3,2,2,2,3,2,1,2,2,2,1,2,3,3,2,2,3,3,3,3,3,3,2,2,3,2,2,2,3,3,2,2,1
+26 - 40 years,Female,Married,Graduate school,Education,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Education,Professional,2,3,1,2,2,3,3,3,3,2,1,2,3,2,1,2,3,3,2,3,3,4,3,3,3,2,3,1,3,2,2,3,3,3,3,3,1
+above 55 years,Male,Married,Graduate school,Education,Top management,2,1,1,1,2,2,2,1,3,3,1,1,2,1,1,2,2,2,1,3,2,3,2,3,2,3,3,2,2,1,1,3,2,2,2,2,1
+above 55 years,Male,Married,Secondary/High school,Education,Professional,2,2,1,1,2,1,1,1,2,2,1,1,2,3,1,3,1,1,1,3,1,3,1,3,2,3,3,3,1,2,1,2,2,2,1,1,1
+41 - 55 years,Female,Married,College/university,Retail / Hypermarket,Middle management,2,2,1,1,2,1,1,1,2,2,1,2,2,2,1,3,1,1,1,3,1,3,1,3,2,3,3,3,1,1,1,2,2,2,2,2,1
+26 - 40 years,Female,Married,College/university,Education,Professional,3,3,2,3,3,3,3,3,3,3,2,3,3,3,2,3,3,3,3,3,3,3,3,3,3,2,2,1,3,3,3,3,3,3,3,3,1
+41 - 55 years,Female,Married,College/university,Banking / Finance,Professional,2,2,2,2,2,1,2,1,2,3,2,2,2,3,2,3,2,1,1,1,2,3,1,3,1,3,3,3,2,1,2,3,2,2,2,2,1
+above 55 years,Male,Married,College/university,Other,Middle management,3,2,2,3,3,2,3,1,3,2,2,3,3,3,3,3,3,3,2,3,2,3,3,3,2,3,2,2,3,3,2,3,3,3,3,3,1
+41 - 55 years,Female,Single,College/university,Manufacturing,Middle management,2,2,2,2,2,2,2,2,2,3,1,2,2,2,2,1,2,1,1,3,1,3,2,3,2,3,3,3,1,1,1,3,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Manufacturing,Middle management,3,3,2,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,2,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Single,College/university,Banking / Finance,Junior management,3,2,2,2,3,2,2,2,2,2,2,2,2,3,2,2,3,2,2,3,2,3,2,3,2,3,3,2,3,3,3,3,3,3,3,3,1
+41 - 55 years,Female,Married,Graduate school,Manufacturing,Middle management,2,2,1,2,2,1,2,1,2,2,1,2,2,2,2,2,2,2,2,2,1,2,1,2,1,3,4,3,1,1,2,3,2,2,2,2,1
+26 - 40 years,Female,Single,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,1,2,2,3,2,3,2,3,3,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Other,Top management,3,2,2,3,3,2,2,2,3,3,2,2,2,2,2,3,3,3,2,3,2,2,2,3,2,2,2,2,3,3,2,3,3,3,3,3,1
+41 - 55 years,Female,Single,College/university,Other,Top management,2,2,2,2,2,2,2,2,3,2,1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,1
+41 - 55 years,Male,Married,Graduate school,Manufacturing,Middle management,3,3,2,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,College/university,Education,Other,3,3,2,3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+41 - 55 years,Female,Single,College/university,Manufacturing,Middle management,2,3,3,3,2,1,1,2,2,3,3,2,0,0,1,1,1,2,2,2,4,3,2,2,2,4,3,4,3,4,2,3,3,4,4,4,1
+< 25 years,Female,Single,College/university,Other,Other,1,1,1,2,1,1,1,1,3,3,3,2,0,1,3,0,1,2,1,3,1,1,1,1,3,4,3,2,0,1,1,1,2,2,2,2,1
+< 25 years,Male,Single,College/university,Other,Other,3,2,3,2,3,3,2,2,4,3,3,3,2,1,3,2,3,2,1,2,3,3,3,3,3,4,2,1,2,2,2,4,2,3,3,1,1
+< 25 years,Female,Single,College/university,Other,Other,3,3,2,2,1,1,2,2,3,3,2,2,1,1,2,2,1,0,2,3,0,2,3,3,1,3,3,2,2,3,2,4,2,1,3,3,1
+< 25 years,Female,Single,College/university,Education,Other,1,2,2,2,2,1,1,2,3,2,3,3,3,3,4,2,1,2,0,2,2,3,3,2,1,2,3,2,2,1,3,2,2,1,1,1,1
+above 55 years,Male,Married,Graduate school,Education,Professional,2,2,2,2,2,2,2,2,2,2,1,2,1,1,2,2,2,2,2,2,2,2,2,2,2,3,3,2,2,2,2,2,2,2,2,2,1
+< 25 years,Male,Single,College/university,Other,Other,2,1,2,1,3,3,1,2,2,2,2,2,0,1,1,0,4,4,2,2,2,3,3,4,3,0,2,1,2,2,1,2,1,2,2,2,1
+< 25 years,Male,Single,College/university,Other,Junior management,3,3,2,3,3,2,2,3,3,3,2,3,2,2,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Married,College/university,Retail / Hypermarket,Middle management,3,3,3,3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+41 - 55 years,Male,Married,College/university,Banking / Finance,Middle management,3,3,2,3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,Graduate school,Manufacturing,Middle management,3,3,2,3,3,3,3,3,3,3,2,3,2,2,3,3,3,3,3,4,3,4,3,4,2,1,2,1,3,3,3,3,4,4,3,3,1
+26 - 40 years,Female,Married,College/university,Banking / Finance,Middle management,3,2,2,3,3,2,2,2,3,3,2,3,2,3,3,3,3,3,3,3,2,3,3,4,2,2,2,2,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Single,College/university,Manufacturing,Middle management,3,3,2,3,3,2,2,3,3,3,2,3,2,2,3,3,3,3,3,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,1,1,2,2,2,3,2,3,3,2,2,2,2,3,4,2,2,2,3,4,1,3,3,2,3,4,4,4,2,2,3,4,1,1,1,2,1
+26 - 40 years,Male,Married,College/university,Retail / Hypermarket,Middle management,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,3,1,2,2,1,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,Secondary/High school,Education,Other,3,2,3,3,4,2,3,3,3,3,3,3,3,0,0,1,1,3,2,1,3,4,4,4,1,3,2,1,3,3,3,3,3,3,2,2,1
+above 55 years,Female,Married,Other,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,1
+26 - 40 years,Female,Single,Graduate school,Banking / Finance,Middle management,3,3,2,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,2,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+above 55 years,Female,Married,Graduate school,Education,Professional,2,2,1,2,2,2,2,2,2,2,1,1,1,1,2,1,2,1,1,2,1,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,Graduate school,Banking / Finance,Middle management,3,3,2,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,2,3,2,2,3,1,3,3,3,3,3,3,3,3,1
+41 - 55 years,Male,Married,Graduate school,Banking / Finance,Middle management,3,3,2,3,3,2,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,3,3,3,1,2,2,1,3,3,2,3,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Manufacturing,Junior management,2,2,2,2,2,2,2,2,2,2,1,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Male,Single,College/university,Other,Other,2,2,1,1,1,1,1,1,3,2,1,1,1,1,1,1,3,2,3,3,3,3,3,3,2,3,3,2,3,3,3,2,2,2,2,2,1
+< 25 years,Female,Single,College/university,Education,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+< 25 years,Male,Married,Graduate school,Manufacturing,Junior management,2,2,2,2,2,1,1,1,2,2,2,2,3,2,3,3,2,1,2,2,1,1,1,1,2,3,3,3,1,1,2,2,1,1,1,1,1
+< 25 years,Female,Single,College/university,Other,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,4,4,4,4,0,0,0,4,0,0,0,0,1
+< 25 years,Male,Single,College/university,Other,Other,3,2,2,2,2,2,2,3,3,2,3,2,2,2,3,2,3,2,2,2,2,2,2,2,1,1,1,1,2,2,3,2,3,4,2,2,1
+< 25 years,Male,Single,College/university,Other,Other,2,2,3,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+< 25 years,Male,Single,College/university,Education,Other,2,2,3,3,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,Secondary/High school,Other,Other,3,2,2,3,3,3,3,3,2,2,2,2,1,1,4,2,4,3,3,1,3,4,4,4,2,0,1,1,3,3,2,4,3,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,1,2,2,3,2,3,2,3,2,3,2,2,2,2,2,4,4,4,4,3,2,3,2,3,1,4,3,1,3,1,3,2,3,1,2,3,1
+26 - 40 years,Female,Married,Graduate school,Manufacturing,Middle management,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,3,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Healthcare,Professional,3,3,2,3,3,2,3,2,3,3,2,3,2,3,3,3,3,3,2,3,2,3,2,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,Primary school,Banking / Finance,Top management,3,4,0,2,4,0,3,4,4,0,4,4,4,4,2,2,2,4,3,1,1,3,2,2,2,2,3,2,2,1,3,1,2,4,0,3,1
+< 25 years,Male,Single,College/university,Banking / Finance,Other,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1
+< 25 years,Male,Single,College/university,Other,Other,1,2,2,3,2,3,2,3,2,3,2,2,2,2,2,4,4,4,4,3,2,3,2,3,1,4,3,1,3,1,3,2,3,1,2,3,1
+< 25 years,Female,Single,College/university,Other,Other,2,2,2,2,1,1,2,2,2,2,2,2,3,3,3,2,1,1,2,4,2,2,2,2,2,2,2,2,2,2,2,2,3,3,2,2,1
+< 25 years,Female,Single,College/university,Other,Other,2,3,3,2,1,3,3,2,3,3,3,2,2,2,3,1,1,2,1,2,1,3,2,3,2,2,2,2,2,3,1,3,2,3,3,3,1
+< 25 years,Female,Single,College/university,Other,Other,2,3,3,3,2,2,3,3,3,3,3,2,2,2,2,2,1,2,1,2,2,2,3,3,2,3,3,2,2,2,3,2,2,2,2,3,1
+< 25 years,Female,Single,College/university,Other,Other,2,1,2,2,1,1,1,1,2,3,2,2,3,2,3,2,1,2,2,2,1,2,2,2,2,2,2,2,2,2,3,2,1,2,2,2,1
+26 - 40 years,Male,Married,College/university,Manufacturing,Middle management,3,3,2,3,3,2,3,2,3,3,3,3,2,2,3,3,3,3,3,3,2,3,2,3,2,2,2,1,3,3,2,3,3,3,3,3,1
+26 - 40 years,Female,Single,College/university,Banking / Finance,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+< 25 years,Female,Single,College/university,Education,Other,1,0,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+< 25 years,Male,Other,College/university,Banking / Finance,Professional,4,3,2,3,3,3,3,4,4,3,4,4,4,3,4,4,3,3,4,3,4,3,3,3,3,2,1,1,4,4,3,4,3,3,3,3,1
+< 25 years,Female,Single,College/university,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Male,Single,College/university,Manufacturing,Other,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Female,Single,College/university,Other,Other,3,3,2,3,3,3,2,3,3,3,3,3,2,1,2,3,3,3,3,2,3,3,3,3,2,3,2,3,3,3,3,3,2,2,3,3,1
+< 25 years,Male,Single,Secondary/High school,Other,Other,3,2,2,4,4,4,4,4,4,4,4,4,2,0,4,4,1,4,1,0,2,1,4,4,3,0,0,0,4,4,4,4,4,2,4,4,1
+< 25 years,Female,Single,College/university,Other,Other,1,1,1,1,1,2,2,2,2,2,2,2,1,1,2,2,1,1,2,1,1,2,2,2,2,3,3,2,1,1,2,2,1,1,1,1,1
+< 25 years,Female,Single,College/university,Other,Other,4,2,3,4,4,3,4,4,4,4,4,4,4,4,4,2,4,4,2,4,3,4,4,4,2,3,3,1,3,1,2,3,4,4,4,4,1
+< 25 years,Female,Other,College/university,Education,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,College/university,Other,Professional,2,2,2,2,0,0,1,0,0,0,0,0,0,0,1,2,0,0,2,0,0,2,0,2,4,4,4,4,0,0,0,0,0,0,0,0,1
+26 - 40 years,Male,Married,College/university,Manufacturing,Top management,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,0,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+41 - 55 years,Female,Married,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,3,3,3,3,1
+41 - 55 years,Male,Married,College/university,Banking / Finance,Top management,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Banking / Finance,Middle management,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,Graduate school,Banking / Finance,Middle management,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Other,Junior management,3,3,2,3,3,3,3,3,3,2,2,3,2,2,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+< 25 years,Female,Single,Graduate school,Other,Other,2,3,3,3,2,3,1,3,3,3,3,2,1,2,2,2,1,1,3,2,1,1,1,1,2,1,1,2,1,1,1,2,2,3,3,2,1
+< 25 years,Male,Single,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,3,3,2,3,3,2,3,3,3,2,2,2,2,2,2,2,2,2,2,3,2,3,2,2,2,2,3,1
+< 25 years,Male,Single,College/university,Other,Other,2,2,2,2,2,2,2,2,3,3,2,2,2,2,3,2,2,2,3,3,2,3,3,3,3,3,2,2,2,2,2,3,2,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,2,1,1,4,3,4,4,4,3,3,3,2,1,1,2,2,4,4,1,3,3,3,3,2,1,0,3,1,3,3,3,2,3,4,4,4,1
+< 25 years,Male,Single,College/university,Other,Other,0,1,1,1,3,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,3,2,2,3,2,0,0,0,2,2,2,1,0,0,0,1,1
+< 25 years,Female,Single,College/university,Other,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Female,Single,College/university,Education,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+< 25 years,Female,Single,Secondary/High school,Other,Other,1,1,1,1,0,0,0,0,1,0,0,0,0,0,2,2,0,0,2,2,0,0,0,0,0,4,3,2,2,2,2,2,1,1,1,1,1
+< 25 years,Female,Single,College/university,Other,Other,2,2,2,2,1,1,2,4,3,3,3,3,1,1,4,2,3,0,1,0,3,4,4,4,3,3,3,3,3,3,3,3,3,1,1,3,1
+< 25 years,Male,Single,College/university,Other,Other,3,3,3,2,2,2,1,1,4,4,4,3,2,0,1,0,1,0,0,4,2,3,2,4,4,4,2,4,0,1,2,2,3,4,4,3,1
+< 25 years,Male,Single,College/university,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0
+< 25 years,Male,Single,College/university,Other,Other,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,2,4,2,3,2,2,1,1,1,1,2,3,1,1,1
+< 25 years,Male,Single,College/university,Other,Other,2,2,2,3,1,1,2,2,2,3,1,1,1,1,3,1,1,2,1,3,2,1,3,3,2,3,3,2,2,2,3,2,3,3,3,3,1
+< 25 years,Male,Single,College/university,Education,Other,2,1,1,0,3,1,2,4,2,2,0,0,0,0,0,2,3,2,0,0,3,4,4,4,2,0,2,3,2,2,3,1,0,2,0,3,1
+< 25 years,Male,Single,Secondary/High school,Education,Other,1,1,2,1,1,1,2,1,2,1,2,2,2,1,2,1,1,1,2,2,1,1,1,1,3,3,2,2,2,2,2,1,1,0,0,1,1
+< 25 years,Male,Single,College/university,Other,Other,4,4,4,4,4,3,1,3,4,4,4,4,4,1,4,4,4,4,1,1,4,4,4,4,4,4,4,4,4,4,3,4,4,4,4,2,1
+< 25 years,Male,Single,College/university,Other,Other,2,3,3,3,3,2,3,3,3,3,2,2,3,2,4,3,2,3,3,3,2,3,4,3,2,3,3,3,3,3,3,3,4,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,1,1,2,2,1,0,3,0,3,3,2,1,1,1,1,1,0,0,2,2,1,1,1,1,2,1,1,1,2,2,2,2,2,1,1,2,1
+< 25 years,Male,Single,Secondary/High school,Other,Other,1,1,1,1,0,0,0,0,0,0,0,0,0,0,3,2,1,1,1,1,1,1,1,1,3,3,3,4,1,1,1,1,2,2,2,2,1
+< 25 years,Female,Single,College/university,Other,Other,2,2,2,2,1,2,2,2,2,2,2,2,2,2,3,3,1,1,1,1,2,3,3,2,2,3,3,2,2,2,2,2,3,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,3,3,4,3,4,3,4,3,2,4,3,3,3,3,3,3,3,3,3,2,1,1,1,3,3,3,2,4,2,4,3,2,3,4,2,3,1
+< 25 years,Male,Other,College/university,Education,Professional,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1
+26 - 40 years,Female,Single,College/university,Other,Middle management,2,3,3,2,2,4,2,3,3,3,2,2,3,2,3,3,3,3,2,2,4,4,4,4,3,2,2,2,2,3,3,2,3,1,1,1,1
+< 25 years,Male,Single,College/university,Other,Other,1,3,4,2,3,3,2,4,4,3,2,3,3,2,3,2,3,2,2,2,3,3,2,3,2,2,1,3,1,3,3,2,1,3,3,3,0
+26 - 40 years,Male,Single,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,1
+26 - 40 years,Female,Married,College/university,Retail / Hypermarket,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,College/university,Banking / Finance,Middle management,3,3,2,3,3,3,3,3,3,2,1,2,2,3,3,3,2,3,3,3,2,3,3,3,1,2,3,1,3,3,3,3,3,3,3,3,1
+< 25 years,Female,Single,College/university,Other,Other,2,2,2,2,1,2,2,2,2,2,2,2,2,2,3,3,1,1,1,1,2,3,3,2,2,3,3,2,2,2,2,2,3,3,3,3,1
+< 25 years,Male,Single,Secondary/High school,Other,Other,3,4,2,2,0,0,2,2,4,4,4,4,2,2,0,0,0,0,0,0,0,0,0,2,4,4,4,4,2,4,2,2,4,3,4,4,1
+26 - 40 years,Female,Single,College/university,Education,Professional,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,3,3,2,3,3,3,2,2,2,2,3,2,2,3,3,3,3,3,1
+41 - 55 years,Male,Married,College/university,Other,Professional,4,4,4,4,3,3,3,3,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,2,2,2,3,3,3,3,3,3,3,3,1
+above 55 years,Male,Married,Secondary/High school,Education,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Secondary/High school,Manufacturing,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,College/university,Manufacturing,Middle management,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,3,1,2,2,1,3,3,3,3,4,4,3,3,1
+41 - 55 years,Male,Married,Graduate school,Education,Top management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,College/university,Manufacturing,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Manufacturing,Middle management,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Married,College/university,Education,Professional,2,2,3,3,2,2,2,2,3,3,3,3,3,2,3,3,2,2,2,2,2,2,3,3,3,2,3,2,2,3,3,3,3,2,3,3,1
+< 25 years,Female,Single,Graduate school,Education,Junior management,3,4,4,4,3,4,1,2,4,2,3,2,2,1,4,1,3,4,1,3,4,4,3,4,0,3,1,1,4,4,4,4,4,4,3,4,1
+41 - 55 years,Male,Married,College/university,Banking / Finance,Top management,4,3,3,2,3,3,3,3,4,3,2,3,3,3,3,3,3,3,3,3,3,4,3,3,1,2,2,0,3,3,3,3,4,4,3,3,1
+< 25 years,Female,Single,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,Graduate school,Other,Professional,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,2,3,3,3,1,2,2,1,3,3,3,3,4,4,3,3,1
+< 25 years,Male,Single,Secondary/High school,Other,Other,1,3,2,3,1,1,2,2,2,1,2,1,2,2,2,3,1,1,2,2,2,3,3,3,2,3,3,3,1,2,2,2,2,1,2,2,0
+26 - 40 years,Male,Single,College/university,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Married,College/university,Education,Top management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Married,College/university,Other,Top management,2,2,2,3,2,1,2,2,3,3,3,3,3,3,3,3,2,2,3,3,2,2,2,3,3,2,2,3,3,3,3,3,3,3,3,3,0
+26 - 40 years,Male,Single,College/university,Banking / Finance,Middle management,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Manufacturing,Top management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,College/university,Other,Professional,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Banking / Finance,Middle management,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Education,Top management,3,3,2,2,3,3,1,1,2,2,2,3,3,3,3,3,3,3,3,2,0,3,3,1,2,1,3,3,1,2,0,3,0,3,2,2,0
+26 - 40 years,Female,Married,College/university,Other,Professional,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,0,4,4,4,4,4,4,4,4,1
+41 - 55 years,Male,Married,College/university,Retail / Hypermarket,Middle management,3,3,3,3,2,3,4,4,4,4,4,3,3,4,4,3,2,4,4,3,3,4,4,4,3,3,4,1,2,2,3,4,3,2,4,4,1
+26 - 40 years,Female,Married,College/university,Other,Middle management,1,1,1,1,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,1,1,1,1,1
+26 - 40 years,Female,Married,College/university,Other,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Other,Junior management,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+26 - 40 years,Female,Single,College/university,Other,Junior management,2,2,3,3,0,1,2,3,3,3,3,3,2,2,2,2,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Female,Single,College/university,Other,Other,2,3,3,3,1,2,2,2,3,3,3,3,1,1,3,3,2,2,2,2,2,2,2,2,1,1,2,1,3,3,3,2,2,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,1,2,1,4,0,2,2,3,2,3,3,3,0,0,4,2,3,2,2,0,3,4,4,4,2,4,4,2,2,1,2,0,0,2,0,0,1
+26 - 40 years,Male,Single,College/university,Manufacturing,Middle management,3,3,3,3,2,2,2,1,3,2,2,3,2,2,2,2,3,2,2,2,2,2,3,2,2,2,2,2,3,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Married,College/university,Manufacturing,Top management,2,1,0,1,1,1,1,1,1,1,1,1,2,2,3,2,2,2,1,1,0,1,0,0,0,1,1,1,1,1,1,1,1,2,2,2,0
+41 - 55 years,Male,Married,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Single,Graduate school,Manufacturing,Top management,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,1,1,1,1,1,0,2,0,3,2,1,2,2,1,3,1,1,0,2,1,1,0,1,1,1,3,4,2,1,0,2,2,1,1,1,1,1
+41 - 55 years,Male,Single,College/university,Other,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Female,Married,College/university,Banking / Finance,Middle management,3,3,3,3,3,3,3,3,3,2,2,2,2,3,2,2,3,2,2,3,2,3,2,3,2,2,2,1,3,3,3,3,3,3,3,3,1
+41 - 55 years,Female,Single,College/university,Other,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+above 55 years,Female,Single,Other,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Single,College/university,Other,Middle management,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,2,2,2,2,3,3,3,3,4,4,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,4,3,3,4,4,4,3,3,4,4,4,4,3,3,3,4,1,3,3,3,3,3,3,3,2,2,1,0,4,4,3,3,3,4,3,3,1
+41 - 55 years,Female,Married,College/university,Banking / Finance,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Healthcare,Junior management,3,3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,4,4,3,3,1
+26 - 40 years,Female,Married,College/university,Retail / Hypermarket,Junior management,3,3,3,3,3,3,3,3,3,3,2,2,2,3,3,3,2,3,2,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Married,College/university,Retail / Hypermarket,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,Graduate school,Education,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,Secondary/High school,Manufacturing,Junior management,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,4,4,3,3,1
+41 - 55 years,Female,Married,Graduate school,Education,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Female,Married,College/university,Retail / Hypermarket,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,Secondary/High school,Other,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,Secondary/High school,Retail / Hypermarket,Junior management,3,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Banking / Finance,Junior management,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,2,3,3,3,2,2,2,2,3,3,3,3,4,4,4,4,1
+26 - 40 years,Male,Single,College/university,Retail / Hypermarket,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Married,College/university,Retail / Hypermarket,Middle management,3,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,2,2,1
+26 - 40 years,Male,Married,College/university,Retail / Hypermarket,Middle management,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Single,College/university,Education,Other,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,2,3,3,3,2,3,3,3,2,2,2,2,3,3,3,3,4,4,3,3,1
+above 55 years,Male,Married,College/university,Other,Top management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,2,2,1
+41 - 55 years,Female,Married,College/university,Banking / Finance,Top management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,Secondary/High school,Retail / Hypermarket,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+above 55 years,Male,Married,College/university,Other,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,Graduate school,Education,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Female,Married,College/university,Retail / Hypermarket,Middle management,2,2,2,2,2,2,2,2,3,2,1,2,2,3,2,2,2,3,2,2,2,3,2,2,2,2,2,2,2,2,2,2,3,3,2,2,1
+< 25 years,Male,Single,Secondary/High school,Education,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Education,Top management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Manufacturing,Junior management,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+41 - 55 years,Female,Married,College/university,Education,Middle management,3,3,3,3,2,3,2,2,3,2,1,2,2,3,2,2,2,3,2,3,2,3,2,3,2,2,2,2,3,3,2,3,3,3,3,3,1
+26 - 40 years,Male,Single,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Other,Junior management,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Married,College/university,Other,Middle management,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,1,4,4,4,4,4,4,4,4,1
+26 - 40 years,Male,Single,College/university,Education,Junior management,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+26 - 40 years,Male,Married,College/university,Banking / Finance,Middle management,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Single,College/university,Other,Other,3,3,2,3,3,2,3,2,3,3,2,3,2,3,3,3,3,3,2,3,2,3,2,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+41 - 55 years,Female,Married,Graduate school,Education,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,College/university,Healthcare,Professional,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,1,1,1,1,1,2,1,2,3,3,3,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Married,Graduate school,Education,Professional,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+41 - 55 years,Male,Married,Graduate school,Education,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Education,Other,3,3,2,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,1,2,2,1,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Single,College/university,Banking / Finance,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Female,Single,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Male,Single,College/university,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,College/university,Other,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Healthcare,Top management,3,3,3,3,3,3,3,3,3,3,2,2,2,3,2,2,3,3,2,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Married,College/university,Banking / Finance,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Female,Married,College/university,Education,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Retail / Hypermarket,Junior management,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+26 - 40 years,Female,Single,College/university,Banking / Finance,Middle management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Female,Married,Graduate school,Education,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+26 - 40 years,Male,Single,College/university,Retail / Hypermarket,Junior management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+< 25 years,Male,Single,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Education,Professional,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Secondary/High school,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+above 55 years,Male,Married,Graduate school,Education,Top management,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,1
+above 55 years,Female,Married,College/university,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1
+41 - 55 years,Male,Married,Graduate school,Education,Professional,3,3,3,3,3,3,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,3,3,3,3,1
+< 25 years,Male,Single,College/university,Other,Other,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1

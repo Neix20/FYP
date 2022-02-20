@@ -2,6 +2,8 @@ import math
 import numpy as np
 import pandas as pd
 
+from scipy.stats import pearsonr, spearmanr, kendalltau, pointbiserialr
+
 from Utilities.HeapQueue import *
 
 # Calculate Merit
@@ -83,7 +85,7 @@ def CFS(X, Y, func, n_selected_features = 10):
         
             temp_subset = sorted(list(set(temp_subset)))
         
-            if not temp_subset in visited:
+            if temp_subset not in visited:
                 visited.append(temp_subset)
                 merit = merit_calculation(X.iloc[:, temp_subset], Y, func)
                 queue.push(temp_subset, merit)
@@ -95,3 +97,41 @@ def CFS(X, Y, func, n_selected_features = 10):
     best_subset = list(map(lambda x: X.columns[x], best_subset))
     
     return best_subset
+
+def CFS_Union(X, Y, func_arr):
+    final_arr = []
+    for func in func_arr:
+        feature_set = CFS(X, Y, func)
+        final_arr += feature_set
+        
+    return set(final_arr)
+
+def CFS_Intersection(X, Y, func_arr):
+    feature_dict = {}
+
+    for func in func_arr:
+        feature_set = CFS(X, Y, func)
+        for feat in feature_set:
+            if feat in feature_dict:
+                feature_dict[feat] += 2
+            else:
+                feature_dict[feat] = 1
+
+    final_arr = [feature for feature in feature_dict if feature_dict[feature] >= 2]
+
+    return final_arr
+
+def CFS_Non_Intersection(X, Y, func_arr):
+    feature_dict = {}
+
+    for func in func_arr:
+        feature_set = CFS(X, Y, func)
+        for feat in feature_set:
+            if feat in feature_dict:
+                feature_dict[feat] += 2
+            else:
+                feature_dict[feat] = 1
+
+    final_arr = [feature for feature in feature_dict if feature_dict[feature] <= 1]
+
+    return final_arr
