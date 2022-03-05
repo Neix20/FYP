@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
 const upload = multer({ dest: "Dataset/" });
-const { spawn } = require('child_process');
+const spawnSync = require('child_process').spawnSync;
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -11,18 +11,18 @@ router.get('/', (req, res) => {
 });
 
 router.post('/uploadCSV', upload.single('ePaymentDataset'), (req, res) => {
+
+    var fileName = req.file.originalname,
+        feat_col_arr = [];
     // Rename File
-    fs.rename(`${req.file.path}`, `Dataset\\${req.file.originalname}`, _ => {});
+    fs.rename(`${req.file.path}`, `Dataset\\${fileName}`, _ => {});
 
-    let python = spawn('python', ['gen_corr_img.py', req.file.originalname]);
+    let python = spawnSync('python', ['Python-Executables\\script.py', fileName]);
+
     // collect data from script
-    python.stdout.on('data', _ => {
-        console.log("Running")
-    });
-    // in close event we are sure that stream from child process is closed
-    python.on('close', () => {});
+    feat_col_arr = python.stdout.toString().split("->");
 
-    return res.status(200).json({ msg: "Success!" });
+    return res.status(200).json({ msg: `Successfully added ${fileName}!`, feature_columns: feat_col_arr });
 });
 
 module.exports = router;

@@ -29,9 +29,19 @@
             btn.addClass(to_remove);
         }
 
+        function gen_feat_checkbox(name, value) {
+            return `<div class="form-group">
+                <input type="checkbox" name="${name}" value="${value}">
+                <label>${value}</label>
+            </div>`;
+        }
+
         $(function() {
             let panel_ind = 0,
-                num_of_btn = $(".stepwizard-step button").length;
+                num_of_btn = $(".stepwizard-step button").length,
+                demographic_feature = [],
+                filter_feature = [],
+                utaut_feature = [];
 
             // Get List of Buttons
             $(".stepwizard-step button").each((ind, elem) => {
@@ -45,6 +55,7 @@
 
             // Default
             $("#prev_btn").attr("disabled", true);
+            $("#next_btn").attr("disabled", true);
             update_btn($(".stepwizard-step button").eq(0), true);
             $(".panel").eq(panel_ind).css("display", "block");
 
@@ -97,6 +108,30 @@
 
             });
 
+            // Feature Selection I Button
+            $("#select_feat_type_submit_btn").on("click", e => {
+                id = "demo_feat_block";
+                demographic_feature = [...document.querySelectorAll(`div[id='${id}'] > div[class='form-group'] > input[type='checkbox']:checked`)].map(e => e.value);
+
+                // Process Demographic Features
+
+                console.log(demographic_feature);
+
+                id = "filter_feat_block";
+                filter_feature = [...document.querySelectorAll(`div[id='${id}'] > div[class='form-group'] > input[type='checkbox']:checked`)].map(e => e.value);
+
+
+                console.log(filter_feature);
+
+                id = "utaut_feat_block";
+                utaut_feature = [...document.querySelectorAll(`div[id='${id}'] > div[class='form-group'] > input[type='checkbox']:checked`)].map(e => e.value);
+
+                // Process UTAUT Features
+                // utaut_feature = utaut_feature.map(x => x.split(": ")[0])
+
+                console.log(utaut_feature);
+            });
+
             let uploadCSVForm = $("form[id='uploadCSVForm']");
             uploadCSVForm.submit(e => {
                 e.preventDefault();
@@ -110,12 +145,55 @@
                     cache: false,
                     data: fData,
                     success: resp => {
-                        console.log(resp);
+                        $("#upload_csv_resp").text(resp["msg"]);
+                        $("#next_btn").attr("disabled", false);
+                        select_feature_callback(resp["feature_columns"]);
+                        check_selected_checkbox();
                     }
                 });
-            })
+            });
 
         });
+
+        function select_feature_callback(feature_arr) {
+            let id = "",
+                name = "";
+
+            id = "#demo_feat_block";
+            name = "demo_features";
+            for (feat of feature_arr) {
+                $(id).append(gen_feat_checkbox(name, feat));
+            }
+
+            id = "#filter_feat_block";
+            name = "filter_features";
+            for (feat of feature_arr) {
+                $(id).append(gen_feat_checkbox(name, feat));
+            }
+
+            id = "#utaut_feat_block";
+            name = "utaut_features";
+            for (feat of feature_arr) {
+                $(id).append(gen_feat_checkbox(name, feat));
+            }
+        }
+
+        function check_selected_checkbox() {
+            id = "demo_feat_block";
+            $(`div[id='${id}'] > div[class='form-group'] > input[type='checkbox']`).slice(6, 12).each(function() {
+                this.checked = true;
+            });
+
+            id = "filter_feat_block";
+            $(`div[id='${id}'] > div[class='form-group'] > input[type='checkbox']`).slice(12, 28).each(function() {
+                this.checked = true;
+            });
+
+            id = "utaut_feat_block";
+            $(`div[id='${id}'] > div[class='form-group'] > input[type='checkbox']`).slice(28).each(function() {
+                this.checked = true;
+            });
+        }
     </script>
 </head>
 
@@ -132,11 +210,15 @@
                         </div>
                         <div class="stepwizard-step">
                             <button class="btn btn-secondary" disabled="true"></button>
-                            <p>Correlation Network</p>
+                            <p>Data Selection & Pre-processing I</p>
                         </div>
                         <div class="stepwizard-step">
                             <button class="btn btn-secondary" disabled="true"></button>
-                            <p>Data Selection & Pre-processing</p>
+                            <p>Data Selection & Pre-processing II</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Correlation Network</p>
                         </div>
                         <div class="stepwizard-step">
                             <button class="btn btn-secondary" disabled="true"></button>
@@ -163,7 +245,9 @@
                     <div class="panel" style="height: 355px">
                         <div class="d-flex justify-content-center" style="height: 100%">
                             <div class="align-self-center" style="width: 800px">
+
                                 <div class="h2">Upload CSV</div>
+
                                 <form id="uploadCSVForm" action="uploadCSV" method="POST">
                                     <div class="row" style="width: 100%">
                                         <div class="col">
@@ -174,46 +258,45 @@
                                         </div>
                                     </div>
                                 </form>
+
+                                <div id="upload_csv_resp" class="h2 text-success"></div>
+
                             </div>
                         </div>
                     </div>
 
-                    <!--2nd Panel - Correlation Network -->
-                    <div class="panel">
+                    <!--2nd Panel - Data Selection & Pre-processing II -->
+                    <div class="panel" style="height: 360px">
                         <div class="p-3">
-                            <div class="h2"><u>Pearson Coefficient</u></div>
-
                             <div class="row">
                                 <div class="col">
-                                    <div class="border border-dark">
-                                        <img src="img/Pearson-CirFig.jpeg" alt="Pearson Coefficient Circular Layout Figure" style="height: 500px; width: 500px;" />
+                                    <div class="border border-dark px-3" style="height: 300px; overflow-y:scroll">
+                                        <div class="h3 text-center">Demographic Variables</div>
+                                        <div id="demo_feat_block"></div>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="border border-dark">
-                                        <img src="img/Pearson-FruFig.jpeg" alt="Pearson Coefficient Fruchterman Reingold Figure" style="height: 500px; width: 500px;" />
+                                    <div class="border border-dark px-3" style="height: 300px; overflow-y:scroll">
+                                        <div class="h3 text-center">Filter Variables</div>
+                                        <div id="filter_feat_block"></div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="border border-dark px-3" style="height: 300px; overflow-y:scroll">
+                                        <div class="h3 text-center">UTAUT Variables</div>
+                                        <div id="utaut_feat_block"></div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="h2"><u>Spearman Coefficient</u></div>
-
-                            <div class="row">
+                            <div class="row p-1">
                                 <div class="col">
-                                    <div class="border border-dark">
-                                        <img src="img/Spearman-CirFig.jpeg" alt="Spearman Coefficient Circular Layout Figure" style="height: 500px; width: 500px;" />
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="border border-dark">
-                                        <img src="img/Spearman-FruFig.jpeg" alt="Spearman Coefficient Fruchterman Reingold Figure" style="height: 500px; width: 500px;" />
-                                    </div>
+                                    <button id="select_feat_type_submit_btn" class="btn btn-primary float-end">Submit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!--3rd Panel - Data Selection & Pre-processing -->
+                    <!--3rd Panel - Data Selection & Pre-processing II -->
                     <div class="panel" style="height: 355px">
                         <div class="p-3 h-100">
                             <div class="row h-100">
@@ -291,6 +374,41 @@
                                             <input type="radio" name="target_variable">
                                             <label>Work Industry</label>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--3rd Panel - Correlation Network -->
+                    <div class="panel">
+                        <div class="p-3">
+                            <div class="h2"><u>Pearson Coefficient</u></div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Pearson-CirFig.jpeg" alt="Pearson Coefficient Circular Layout Figure" style="height: 500px; width: 500px;" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Pearson-FruFig.jpeg" alt="Pearson Coefficient Fruchterman Reingold Figure" style="height: 500px; width: 500px;" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h2"><u>Spearman Coefficient</u></div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Spearman-CirFig.jpeg" alt="Spearman Coefficient Circular Layout Figure" style="height: 500px; width: 500px;" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Spearman-FruFig.jpeg" alt="Spearman Coefficient Fruchterman Reingold Figure" style="height: 500px; width: 500px;" />
                                     </div>
                                 </div>
                             </div>
