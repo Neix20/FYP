@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correlation Analysis of E-Payment Features</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function update_btn(btn, val) {
+            let to_add = "",
+                to_remove = "";
+
+            if (val == true) {
+                to_add = "btn-secondary";
+                to_remove = "btn-primary";
+            } else {
+                to_add = "btn-primary";
+                to_remove = "btn-secondary";
+            }
+
+            btn.attr("disabled", !val);
+            btn.removeClass(to_add);
+            btn.addClass(to_remove);
+        }
+
+        $(function() {
+            let panel_ind = 0,
+                num_of_btn = $(".stepwizard-step button").length;
+
+            // Get List of Buttons
+            $(".stepwizard-step button").each((ind, elem) => {
+                elem.innerHTML = (ind + 1);
+            });
+
+            // List of Panels
+            $(".panel").each((ind, elem) => {
+                elem.style.display = "none";
+            });
+
+            // Default
+            $("#prev_btn").attr("disabled", true);
+            update_btn($(".stepwizard-step button").eq(0), true);
+            $(".panel").eq(panel_ind).css("display", "block");
+
+            // Next Button
+            $("#next_btn").on("click", e => {
+                // Update Navigation Button
+                let prev_btn = $(".stepwizard-step button").eq(panel_ind);
+                update_btn(prev_btn, false);
+
+                let next_btn = $(".stepwizard-step button").eq(panel_ind + 1);
+                update_btn(next_btn, true);
+
+                // Previous Panel
+                $(".panel").eq(panel_ind).css("display", "none");
+
+                // Next Panel
+                $(".panel").eq(panel_ind + 1).css("display", "block");
+
+                panel_ind += 1;
+                if (panel_ind > 0) {
+                    $("#prev_btn").attr("disabled", false);
+                }
+                if (panel_ind == num_of_btn - 1) {
+                    $("#next_btn").attr("disabled", true);
+                }
+            });
+
+            // Previous Button
+            $("#prev_btn").on("click", e => {
+                // Update Navigation Button
+                let prev_btn = $(".stepwizard-step button").eq(panel_ind);
+                update_btn(prev_btn, false);
+
+                let next_btn = $(".stepwizard-step button").eq(panel_ind - 1);
+                update_btn(next_btn, true);
+
+                // Previous Panel
+                $(".panel").eq(panel_ind).css("display", "none");
+
+                // Next Panel
+                $(".panel").eq(panel_ind - 1).css("display", "block");
+
+                panel_ind -= 1;
+                if (panel_ind == 0) {
+                    $("#prev_btn").attr("disabled", true);
+                }
+                if (panel_ind < num_of_btn - 1) {
+                    $("#next_btn").attr("disabled", false);
+                }
+
+            });
+
+            let uploadCSVForm = $("form[id='uploadCSVForm']");
+            uploadCSVForm.submit(e => {
+                e.preventDefault();
+                let fData = new FormData(uploadCSVForm[0]);
+                $.ajax({
+                    url: uploadCSVForm.attr("action"),
+                    type: uploadCSVForm.attr("method"),
+                    enctype: 'multipart/form-data',
+                    processData: false, // Important!
+                    contentType: false,
+                    cache: false,
+                    data: fData,
+                    success: resp => {
+                        console.log(resp);
+                    }
+                });
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="p-3" style="background-color:lightgray;">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="stepwizard">
+                    <div class="stepwizard-row">
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Upload CSV</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Correlation Network</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Data Selection & Pre-processing</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Feature Selection</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Model Visualization</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Result Analysis</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <button class="btn btn-secondary" disabled="true"></button>
+                            <p>Complete!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-dark">
+
+                    <!--1st Panel - Upload CSV -->
+                    <div class="panel" style="height: 355px">
+                        <div class="d-flex justify-content-center" style="height: 100%">
+                            <div class="align-self-center" style="width: 800px">
+                                <div class="h2">Upload CSV</div>
+                                <form id="uploadCSVForm" action="uploadCSV" method="POST">
+                                    <div class="row" style="width: 100%">
+                                        <div class="col">
+                                            <input type="file" class="form-control" name="ePaymentDataset">
+                                        </div>
+                                        <div class="col">
+                                            <input type="submit" class="btn btn-success" value="Submit" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--2nd Panel - Correlation Network -->
+                    <div class="panel">
+                        <div class="p-3">
+                            <div class="h2"><u>Pearson Coefficient</u></div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Pearson-CirFig.jpeg" alt="Pearson Coefficient Circular Layout Figure" style="height: 500px; width: 500px;" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Pearson-FruFig.jpeg" alt="Pearson Coefficient Fruchterman Reingold Figure" style="height: 500px; width: 500px;" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h2"><u>Spearman Coefficient</u></div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Spearman-CirFig.jpeg" alt="Spearman Coefficient Circular Layout Figure" style="height: 500px; width: 500px;" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="border border-dark">
+                                        <img src="img/Spearman-FruFig.jpeg" alt="Spearman Coefficient Fruchterman Reingold Figure" style="height: 500px; width: 500px;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--3rd Panel - Data Selection & Pre-processing -->
+                    <div class="panel" style="height: 355px">
+                        <div class="p-3 h-100">
+                            <div class="row h-100">
+                                <div class="col-8 h-100">
+                                    <div class="border border-dark px-3 h-100">
+                                        <div class="h3 text-center">Filter Variables</div>
+                                        <div class="h5"><u>Do you own any of the following? </u></div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>Mobile Smartphone</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>Bank Cards (Credit, Debit, Pre-paid)</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>Touch n Go</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>Internet Services (e.g: Broadband)</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>E-wallet account (E.g: MOL or PayPal)</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>Internet of Things gadget (e.g: Fitbit – measure steps, etc)</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>Blockchain / Cryptocurrency Coin</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label>HealthCare Gadget (E.g: Blood pressure measure device etc)</label>
+                                        </div>
+                                        <div class="my-2"></div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label><i>Have you ever purchased anything using the E-payment mode?</i></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="filter_variable">
+                                            <label><i>In the next six months, do you plan to purchase anything using the E-payment mode?</i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="border border-dark px-3 h-100">
+                                        <div class="h4 text-center">Target Variables</div>
+                                        <div class="form-group">
+                                            <input type="radio" name="target_variable">
+                                            <label>Age</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="target_variable">
+                                            <label>Gender</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="target_variable">
+                                            <label>Education Level</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="target_variable">
+                                            <label>Marital Status</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="target_variable">
+                                            <label>Work Position</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="target_variable">
+                                            <label>Work Industry</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--4th Panel - Feature Selection -->
+                    <div class="panel" style="height: 355px">
+                        <div class="d-flex justify-content-center" style="height: 100%">
+                            <div class="align-self-center">
+                                Work In Progress
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--5th Panel - Model Visualization -->
+                    <div class="panel" style="height: 355px">
+                        <div class="d-flex justify-content-center" style="height: 100%">
+                            <div class="align-self-center">
+                                Work In Progress
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--6th Panel - Result Analysis -->
+                    <div class="panel" style="height: 355px">
+                        <div class="d-flex justify-content-center" style="height: 100%">
+                            <div class="align-self-center">
+                                Work In Progress
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--7th Panel - Complete -->
+                    <div class="panel" style="height: 355px">
+                        <div class="d-flex justify-content-center" style="height: 100%">
+                            <div class="align-self-center">
+                                <div class="h2 fst-italic">Thank you for using our program!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-end mt-2">
+                    <div class="col-2">
+                        <button id="prev_btn" class="btn btn-outline-primary">Previous</button>
+                        <button id="next_btn" class="btn btn-outline-primary float-end">Next</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
