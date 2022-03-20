@@ -1,5 +1,6 @@
 .stepwizard-step p {
     margin-top: 10px;
+    font-size: 20px;
 }
 
 .stepwizard-row {
@@ -26,4 +27,12 @@
     display: table-cell;
     text-align: center;
     position: relative;
+}
+
+.h2 {
+    font-size: 36px;
+}
+
+.h3 {
+    font-size: 30px;
 }

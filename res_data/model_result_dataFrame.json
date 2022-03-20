@@ -1,0 +1,32 @@
+{
+    "Precision": {
+        "Decision Tree": 0.6849178695868591,
+        "Decision Tree (IFS)": 0.6203282828282828,
+        "Decision Tree (UFS)": 0.6389957264957266
+    },
+    "Recall": {
+        "Decision Tree": 0.6666666666666666,
+        "Decision Tree (IFS)": 0.5666666666666667,
+        "Decision Tree (UFS)": 0.6444444444444445
+    },
+    "F1-Score": {
+        "Decision Tree": 0.6674901185770751,
+        "Decision Tree (IFS)": 0.5430888063841591,
+        "Decision Tree (UFS)": 0.6295019157088123
+    },
+    "Accuracy Score": {
+        "Decision Tree": 57.23809523809523,
+        "Decision Tree (IFS)": 60.66666666666667,
+        "Decision Tree (UFS)": 57.14285714285713
+    },
+    "MCC": {
+        "Decision Tree": 0.34967921281051384,
+        "Decision Tree (IFS)": 0.19844296393951896,
+        "Decision Tree (UFS)": 0.2492690185324373
+    },
+    "Time Taken": {
+        "Decision Tree": 0.046875,
+        "Decision Tree (IFS)": 0.03125,
+        "Decision Tree (UFS)": 0.03125
+    }
+}

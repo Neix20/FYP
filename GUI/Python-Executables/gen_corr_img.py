@@ -1,4 +1,5 @@
 # importing the sys module
+import os
 import sys
 import time
 import numpy as np
@@ -17,20 +18,20 @@ from Utilities.corr_matrix import *
 from Visualization.network_graph import *
 
 filename = sys.argv[1]
+column_arr = sys.argv[2]
 
 # Read File
-df = pd.read_csv(f"..\\Dataset\\{filename}")
+df = pd.read_csv(f"Dataset\\{filename}")
 
 # Generate UTAUT Factor Dataframe
 utaut_fac_df = pd.DataFrame()
 
-column_arr = df.iloc[:, 28:].columns
-column_arr = [col.split(": ")[0] for col in column_arr]
+column_arr = column_arr.split("->")
 
 for (ind, col_name) in enumerate(column_arr):
-    utaut_fac_df[col_name] = df.iloc[:, 28 + ind]
-    utaut_fac_df[col_name] = utaut_fac_df[col_name].map(lambda x : x - 1)
-    
+    tmp_col_name = col_name.split(": ")[0]
+    utaut_fac_df[tmp_col_name] = df.loc[:, col_name]
+    utaut_fac_df[tmp_col_name] = utaut_fac_df[tmp_col_name].map(lambda x : x - 1)
 # Change Data Type to int
 utaut_fac_df = utaut_fac_df.astype(int)
 
@@ -48,7 +49,7 @@ layout = dict(
     plot_bgcolor = "#fff",
 )
 cirFig.update_layout(layout)
-cirFig.write_image("..\\public\\img\\Pearson-CirFig.jpeg")
+cirFig.write_image("public\\img\\Pearson-CirFig.jpeg")
 
 # Fruchterman Reingold Layout
 fruFig = network_graph(corr_df, "Important Features - Fruchterman Reingold Layout", nx.fruchterman_reingold_layout, 0.75)
@@ -59,7 +60,7 @@ layout = dict(
     plot_bgcolor = "#fff",
 )
 fruFig.update_layout(layout)
-fruFig.write_image("..\\public\\img\\Pearson-FruFig.jpeg")
+fruFig.write_image("public\\img\\Pearson-FruFig.jpeg")
 
 # Output Spearman
 
@@ -75,7 +76,7 @@ layout = dict(
     plot_bgcolor = "#fff",
 )
 cirFig.update_layout(layout)
-cirFig.write_image("..\\public\\img\\Spearman-CirFig.jpeg")
+cirFig.write_image("public\\img\\Spearman-CirFig.jpeg")
 
 # Fruchterman Reingold Layout
 fruFig = network_graph(corr_df, "Important Features - Fruchterman Reingold Layout", nx.fruchterman_reingold_layout, 0.75)
@@ -86,6 +87,10 @@ layout = dict(
     plot_bgcolor = "#fff",
 )
 fruFig.update_layout(layout)
-fruFig.write_image("..\\public\\img\\Spearman-FruFig.jpeg")
+fruFig.write_image("public\\img\\Spearman-FruFig.jpeg")
+
+print("Completed Execution of gen_corr_img.py")
+
+sys.stdout.flush()
 
 

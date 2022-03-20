@@ -43,11 +43,11 @@ def show_bar_graph_percentage(df, title = "", x_title = "", y_title = "", y_axis
 
 def cmp_result_tbl(clf_report_arr, col_name):
     name_arr, arr_list = [], []
-    for name, clf_report, mcc, time in clf_report_arr:
-        arr_list.append(clf_report.loc[col_name.lower()][:-1].tolist() + [mcc, time])
+    for name, clf_report, acc_score, mcc, time in clf_report_arr:
+        arr_list.append(clf_report.loc[col_name.lower()][:-1].tolist() + [acc_score, mcc, time])
         name_arr.append(name)
         
-    df = pd.DataFrame(arr_list, columns = ["Precision", "Recall", "F1-Score", "MCC", "Time Taken"])
+    df = pd.DataFrame(arr_list, columns = ["Precision", "Recall", "F1-Score", "Accuracy Score", "MCC", "Time Taken"])
     df.index = name_arr
     
     return df
@@ -87,8 +87,10 @@ def prc_roc_graph(model_arr, X, Y, x_cor, title, x_title, y_title, func):
         yhat = model.predict_proba(X)
         yhat = yhat[:, -1]
         a, b, c = func(Y, yhat)
+        # 1, 0 for ROC
         if x_cor == [1, 0]:
             x_val, y_val = b, a
+        # 0, 1 for PRC
         else:
             x_val, y_val = a, b
         fig.add_trace(
