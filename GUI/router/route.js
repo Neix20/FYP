@@ -11,6 +11,12 @@ function delay(milisecondDelay) {
     while (Date.now() < milisecondDelay) {}
 }
 
+function getDateTimeStamp() {
+    let arr = (new Date()).toLocaleString('en-GB').split(", ");
+    arr[0] = arr[0].split("/").reverse().join("");
+    return arr.join("_");
+}
+
 router.get('/', (req, res) => {
     res.sendFile(`${__dirname}/public/index.html`);
 });
@@ -21,6 +27,12 @@ router.post('/uploadCSV', upload.single('ePaymentDataset'), (req, res) => {
         feat_col_arr = [];
     // Rename File
     fs.rename(`${req.file.path}`, `Dataset\\${fileName}`, _ => {});
+
+    // Create Log File
+    // Command to Replicate Output
+    let command = `python Python-Executables\\get_features.py '${fileName}'`;
+    let logFileName = `getFeatures_${getDateTimeStamp()}`;
+    fs.writeFileSync(`LogFile\\getFeatures\\${logFileName}`, command, { flag: "a+" });
 
     let python = spawn.spawnSync('python', ['Python-Executables\\get_features.py', fileName]);
 
@@ -47,10 +59,20 @@ router.post("/genCorrImage", (req, res) => {
     target_feature = target_feature.join("->");
     utaut_feature = utaut_feature.join("->");
 
+    // Create Log File
+    // Command to Replicate Output
+    let command = `python Python-Executables\\gen_corr_img.py '${fileName}' '${utaut_feature}'`;
+    let logFileName = `genCorrImg_${getDateTimeStamp()}`;
+    fs.writeFileSync(`LogFile\\genCorrImg\\${logFileName}`, command, { flag: "a+" });
+
     let python = spawn.spawnSync('python', ['Python-Executables\\gen_corr_img.py', fileName, utaut_feature]);
 
     // Run Synchrously
     console.log(python.stdout.toString());
+
+    command = `python Python-Executables\\gen_features_df.py '${fileName}' '${filter_feature}' '${target_feature}' '${utaut_feature}'`;
+    logFileName = `genFeaturesDf_${getDateTimeStamp()}`;
+    fs.writeFileSync(`LogFile\\genFeaturesDf\\${logFileName}`, command, { flag: "a+" });
 
     python = spawn.spawnSync('python', ['Python-Executables\\gen_features_df.py', fileName, filter_feature, target_feature, utaut_feature]);
 
@@ -71,8 +93,13 @@ router.post("/genTrainTest", (req, res) => {
     // Convert Array to String
     utaut_feature = utaut_feature.join("->");
 
-    console.log(`python Python-Executables\\gen_train_test_df.py '${filter_feature}' '${target_feature}' '${utaut_feature}'`);
+    // Create Log File
+    // Command to Replicate Output
+    let command = `python Python-Executables\\gen_train_test_df.py '${filter_feature}' '${target_feature}' '${utaut_feature}'`;
+    let logFileName = `genTrainTest_${getDateTimeStamp()}`;
+    fs.writeFileSync(`LogFile\\genTrainTest\\${logFileName}`, command, { flag: "a+" });
 
+    // Execute Command
     python = spawn.spawnSync('python', ['Python-Executables\\gen_train_test_df.py', filter_feature, target_feature, utaut_feature]);
 
     console.log(python.stdout.toString());

@@ -170,9 +170,19 @@ cfs_dict[name] = corr_dict
 print("Completed Selecting Features using CFS!")
     
 # Apply SMOTE imbalance to balance out imbalanced class
-oversample = SMOTE()
-df_X, df_Y = oversample.fit_resample(df_X, df_Y)
+# Check if Targeted Variable have any imbalanced Class
+tmp_Y = df_Y
 
+imb_df = pd.DataFrame(index = df_Y_unique_arr)
+
+imb_df["Count"] = tmp_Y.value_counts().sort_index().set_axis(df_Y_unique_arr)
+
+imb_df["Count (%)"] = round(imb_df["Count"] / imb_df["Count"].sum() * 100.0, 2)
+
+if min(imb_df["Count"]) > len(df_Y_unique_arr) * 2:
+    oversample = SMOTE()
+    df_X, df_Y = oversample.fit_resample(df_X, df_Y)
+    
 print("Completed SMOTE Imbalance!")
 
 # Train Model Using Decision Tree Classifier
@@ -236,11 +246,15 @@ name = "Decision Tree"
 model_dict[name] = create_ModelObj(model, name, tmp_X, tmp_Y, df_Y_unique_arr)
 
 # Generate Decision Tree Visualization using DGraphViz
+viz_col = [name.split(":")[0] for name in tmp_X.columns]
+
+# Output Name into a new JSON File
+
 viz = dtreeviz(
     model_dict[name].model, 
     tmp_X, 
     tmp_Y, 
-    feature_names = tmp_X.columns, 
+    feature_names = viz_col, 
     class_names = df_Y_unique_arr,
     fancy = False)
 
@@ -267,13 +281,14 @@ if len(non_inter_feature_set) > 0:
     model_dict[name] = create_ModelObj(model, name, tmp_X, tmp_Y, df_Y_unique_arr)
 
 # Decision Tree (Union Features)
-tmp_X = df_X.loc[:, union_feature_set]
-tmp_Y = df_Y
+if len(union_feature_set) > 0:
+    tmp_X = df_X.loc[:, union_feature_set]
+    tmp_Y = df_Y
 
-model = DecisionTreeClassifier()
-name = "Decision Tree (UFS)"
+    model = DecisionTreeClassifier()
+    name = "Decision Tree (UFS)"
 
-model_dict[name] = create_ModelObj(model, name, tmp_X, tmp_Y, df_Y_unique_arr)
+    model_dict[name] = create_ModelObj(model, name, tmp_X, tmp_Y, df_Y_unique_arr)
 
 print("Completed Training Model!")
 
