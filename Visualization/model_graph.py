@@ -15,6 +15,11 @@ def show_bar_graph(df, title = "", x_title = "", y_title = "", y_axis_title = ""
     )
     
     fig.update_layout(
+        title = {
+            'text': title,
+            'x':0.5,
+            'xanchor': 'center'
+        },
         xaxis_title = x_title,
         yaxis_title = y_axis_title,
         legend_title = y_title,
@@ -34,6 +39,11 @@ def show_bar_graph_percentage(df, title = "", x_title = "", y_title = "", y_axis
     )
     
     fig.update_layout(
+        title = {
+            'text': title,
+            'x':0.5,
+            'xanchor': 'center'
+        },
         xaxis_title = x_title,
         yaxis_title = y_axis_title,
         legend_title = y_title,

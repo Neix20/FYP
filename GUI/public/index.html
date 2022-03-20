@@ -90,7 +90,7 @@
         }
 
         function gen_img_html(img_path) {
-            return `<img src="${img_path}" style="width: 100%" />`;
+            return `<img src="${img_path}?${Math.random()}" style="width: 100%" />`;
         }
 
         function gen_list_item(feat) {
@@ -377,6 +377,22 @@
                         }
 
                         // 6th Panel - Result Analysis
+
+                        // Update UTAUT Feature Naming
+                        let str = "";
+
+                        for (let val of utaut_feature) {
+                            let tmp_str = "";
+                            tmp_str += `<th>${val.split(":")[0]}</th>`;
+                            tmp_str += `<td>${val}</td>`
+                            str += `<tr>${tmp_str}</tr>`;
+                        }
+
+                        let table_str = `<table class="table table-striped text-center"><tbody>${str}</tbody></table>`;
+
+                        $("#decision_feat_tbl").empty();
+                        $("#decision_feat_tbl").append(table_str);
+
                         let model_res_dict = resp["model_res_dict"];
 
                         // Append model Result DataFrame
@@ -385,19 +401,19 @@
 
                         // Append images to div
                         $("#decision_tree_graph").empty();
-                        $("#decision_tree_graph").append(gen_img_html("img/decision_tree_viz.svg"));
+                        $("#decision_tree_graph").append(gen_img_html("/img/decision_tree_viz.svg"));
 
                         $("#precision_graph").empty();
-                        $("#precision_graph").append(gen_img_html("img/precision-graph.jpeg"));
+                        $("#precision_graph").append(gen_img_html("/img/precision-graph.jpeg"));
 
                         $("#recall_graph").empty();
-                        $("#recall_graph").append(gen_img_html("img/recall-graph.jpeg"));
+                        $("#recall_graph").append(gen_img_html("/img/recall-graph.jpeg"));
 
                         $("#f1-score_graph").empty();
-                        $("#f1-score_graph").append(gen_img_html("img/f1-score-graph.jpeg"));
+                        $("#f1-score_graph").append(gen_img_html("/img/f1-score-graph.jpeg"));
 
                         $("#acc-score_graph").empty();
-                        $("#acc-score_graph").append(`<img src="img/acc_score-graph.jpeg" style="width: 500px; height: 300px" />`);
+                        $("#acc-score_graph").append(`<img src="/img/acc_score-graph.jpeg?${Math.random()}" style="width: 500px; height: 300px" />`);
 
                         alert(resp["msg"]);
 
@@ -410,11 +426,34 @@
 
             $("#gen_graph_btn").on("click", e => {
                 let filter_feature = $("input[name='filter_features_II']:checked").val(),
-                    targeted_feature = $("input[name='target_features_II']:checked").val();
+                    filter_res_feature = $("input[name='filter_features_res_II']:checked").val(),
+                    target_feature = $("input[name='target_features_II']:checked").val();
 
-                // Do Next Time [Optional]
+                filter_feature = `${filter_feature}->${filter_res_feature}`;
 
-                // Show Visualization
+                // Display Loading Gif
+                show_loading_div();
+
+                $.ajax({
+                    url: "/genViz",
+                    type: "POST",
+                    data: {
+                        "filter_feature": filter_feature,
+                        "target_feature": target_feature
+                    },
+                    success: resp => {
+                        hide_loading_div();
+
+                        console.log(resp["msg"]);
+
+                        // Output DIV In Another Window
+                        let myWindow = window.open('', '', '_blank');
+                        let doc = myWindow.document;
+                        doc.open();
+                        doc.write(gen_img_html("img/filter-target-graph.jpeg"));
+                        doc.close();
+                    }
+                });
             });
         });
 
@@ -451,6 +490,8 @@
             // Disable Visualization, Generate Unique and Submit Button
             $("#gen_graph_btn").attr("disabled", true);
             $("#select_feat_II_submit_btn").attr("disabled", true);
+
+            $("#filter_feat_res_II_block").empty();
 
             id = "#filter_feat_II_block";
             name = "filter_features_II";
@@ -701,7 +742,7 @@
                             </div>
                             <div class="row p-1">
                                 <div class="col">
-                                    <button id="gen_graph_btn" class="btn btn-primary btn-lg" style="display: none">Visualization</button>
+                                    <button id="gen_graph_btn" class="btn btn-primary btn-lg">Visualization</button>
                                 </div>
                                 <div class="col">
                                     <button id="select_feat_II_submit_btn" class="btn btn-success btn-lg float-end">Submit</button>
@@ -766,6 +807,14 @@
                                 <div class="col">
                                     <div class="border border-dark px-3 pb-3">
                                         <div class="h3"><u>Decision Tree Visualization</u></div>
+                                        <details>
+                                            <summary class="h4 text-center">UTAUT Feature Naming</summary>
+                                            <div class="row justify-content-center">
+                                                <div class="col-8">
+                                                    <div id="decision_feat_tbl" class="border border-dark"></div>
+                                                </div>
+                                            </div>
+                                        </details>
                                         <div id="decision_tree_graph" class="text-center"></div>
                                     </div>
                                 </div>

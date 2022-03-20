@@ -30,9 +30,13 @@ router.post('/uploadCSV', upload.single('ePaymentDataset'), (req, res) => {
 
     // Create Log File
     // Command to Replicate Output
-    let command = `python Python-Executables\\get_features.py '${fileName}'`;
-    let logFileName = `getFeatures_${getDateTimeStamp()}`;
-    fs.writeFileSync(`LogFile\\getFeatures\\${logFileName}`, command, { flag: "a+" });
+    // let command = `python Python-Executables\\get_features.py '${fileName}'`;
+    // let logFileName = `getFeatures_${getDateTimeStamp()}.txt`;
+    // fs.writeFile(logFileName, command, err => {
+    //     if (err) {
+    //         console.log(err);
+    //     }
+    // });
 
     let python = spawn.spawnSync('python', ['Python-Executables\\get_features.py', fileName]);
 
@@ -61,18 +65,18 @@ router.post("/genCorrImage", (req, res) => {
 
     // Create Log File
     // Command to Replicate Output
-    let command = `python Python-Executables\\gen_corr_img.py '${fileName}' '${utaut_feature}'`;
-    let logFileName = `genCorrImg_${getDateTimeStamp()}`;
-    fs.writeFileSync(`LogFile\\genCorrImg\\${logFileName}`, command, { flag: "a+" });
+    // let command = `python Python-Executables\\gen_corr_img.py '${fileName}' '${utaut_feature}'`;
+    // let logFileName = `genCorrImg_${getDateTimeStamp()}.txt`;
+    // fs.writeFileSync(`LogFile\\genCorrImg\\${logFileName}`, command);
 
     let python = spawn.spawnSync('python', ['Python-Executables\\gen_corr_img.py', fileName, utaut_feature]);
 
     // Run Synchrously
     console.log(python.stdout.toString());
 
-    command = `python Python-Executables\\gen_features_df.py '${fileName}' '${filter_feature}' '${target_feature}' '${utaut_feature}'`;
-    logFileName = `genFeaturesDf_${getDateTimeStamp()}`;
-    fs.writeFileSync(`LogFile\\genFeaturesDf\\${logFileName}`, command, { flag: "a+" });
+    // command = `python Python-Executables\\gen_features_df.py '${fileName}' '${filter_feature}' '${target_feature}' '${utaut_feature}'`;
+    // logFileName = `genFeaturesDf_${getDateTimeStamp()}.txt`;
+    // fs.writeFileSync(`LogFile\\genFeaturesDf\\${logFileName}`, command);
 
     python = spawn.spawnSync('python', ['Python-Executables\\gen_features_df.py', fileName, filter_feature, target_feature, utaut_feature]);
 
@@ -84,8 +88,24 @@ router.post("/genCorrImage", (req, res) => {
     return res.status(200).json({ msg: "Successfully Generated Pearson and Spearman Correlation Image!", feature_dict: feat_dict_obj });
 });
 
-router.post("/genTrainTest", (req, res) => {
+router.post("/genViz", (req, res) => {
+    let filter_feature = req.body.filter_feature,
+        target_feature = req.body.target_feature;
 
+    // Create Log File
+    // Command to Replicate Output
+    // let command = `python Python-Executables\\gen_viz.py '${filter_feature}' '${target_feature}'`;
+    // let logFileName = `genViz_${getDateTimeStamp()}.txt`;
+    // fs.writeFileSync(`LogFile\\genViz\\${logFileName}`, command);
+
+    python = spawn.spawnSync('python', ['Python-Executables\\gen_viz.py', filter_feature, target_feature]);
+
+    console.log(python.stdout.toString());
+
+    return res.status(200).json({ msg: "Successfully Generated filter-target-graph.jpeg!" });
+});
+
+router.post("/genTrainTest", (req, res) => {
     let filter_feature = req.body.filter_feature,
         target_feature = req.body.target_feature,
         utaut_feature = req.body.utaut_feature;
@@ -95,9 +115,9 @@ router.post("/genTrainTest", (req, res) => {
 
     // Create Log File
     // Command to Replicate Output
-    let command = `python Python-Executables\\gen_train_test_df.py '${filter_feature}' '${target_feature}' '${utaut_feature}'`;
-    let logFileName = `genTrainTest_${getDateTimeStamp()}`;
-    fs.writeFileSync(`LogFile\\genTrainTest\\${logFileName}`, command, { flag: "a+" });
+    // let command = `python Python-Executables\\gen_train_test_df.py '${filter_feature}' '${target_feature}' '${utaut_feature}'`;
+    // let logFileName = `genTrainTest_${getDateTimeStamp()}.txt`;
+    // fs.writeFileSync(`LogFile\\genTrainTest\\${logFileName}`, command);
 
     // Execute Command
     python = spawn.spawnSync('python', ['Python-Executables\\gen_train_test_df.py', filter_feature, target_feature, utaut_feature]);
