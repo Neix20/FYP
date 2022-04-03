@@ -27,7 +27,10 @@ utaut_feature = sys.argv[3]
 # Split String into Array
 utaut_feature = utaut_feature.split("->")
 
-feature_arr = [filter_feature, target_feature] + utaut_feature
+if filter_feature != "None->None":
+    feature_arr = [filter_feature, target_feature] + utaut_feature
+else:
+    feature_arr = [target_feature] + utaut_feature
 
 print("Started Operation")
 
@@ -37,11 +40,12 @@ df = pd.read_csv("Dataset\\res_processed.csv")
 # Create New Dataset From Selected Features
 df = df.loc[:, feature_arr]
 
-# Filter Values Based on "Yes" and "No"
-df = df[df[filter_feature] == "Yes"]
+if filter_feature != "None->None":
+    # Filter Values Based on "Yes" and "No"
+    df = df[df[filter_feature] == "Yes"]
 
-# Drop Filter Feature
-df = df.drop([filter_feature], axis = 1)
+    # Drop Filter Feature
+    df = df.drop([filter_feature], axis = 1)
 
 # Output CSV
 df.to_csv("Dataset\\train_test_df.csv", index=False)

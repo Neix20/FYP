@@ -1,51 +1,51 @@
 {
     "inter_feature_set": {
         "feature_set": [
-            "EE1: My interaction with Blockchain / Cryptocurrency Coin is clear and understandable.",
-            "FC3: Blockchain / Cryptocurrency Coin is compatible with other systems I use."
+            "SE2: I can complete a job or task using Blockchain / Cryptocurrency Coin , if I can call someone for help if I get stuck."
         ],
         "corr_dict": {
-            "EE1": {
-                "EE1": 1.0,
-                "FC3": null
-            },
-            "FC3": {
-                "EE1": 0.5837298750514555,
-                "FC3": 1.0
+            "SE2": {
+                "SE2": 0.9999999999999994
             }
         }
     },
     "non_inter_feature_set": {
         "feature_set": [
-            "SE1: I can complete a job or task using Blockchain / Cryptocurrency Coin , if there is no one around to tell me what to do."
+            "FC4: A specific person (or group) is available for assistance with Blockchain / Cryptocurrency Coin difficulties.",
+            "AT2: Blockchain / Cryptocurrency Coin makes effort more interesting."
         ],
         "corr_dict": {
-            "SE1": {
-                "SE1": 1.0
+            "FC4": {
+                "FC4": 0.9999999999999992,
+                "AT2": null
+            },
+            "AT2": {
+                "FC4": 0.5741514590191188,
+                "AT2": 1.0
             }
         }
     },
     "union_feature_set": {
         "feature_set": [
-            "SE1: I can complete a job or task using Blockchain / Cryptocurrency Coin , if there is no one around to tell me what to do.",
-            "FC3: Blockchain / Cryptocurrency Coin is compatible with other systems I use.",
-            "EE1: My interaction with Blockchain / Cryptocurrency Coin is clear and understandable."
+            "FC4: A specific person (or group) is available for assistance with Blockchain / Cryptocurrency Coin difficulties.",
+            "SE2: I can complete a job or task using Blockchain / Cryptocurrency Coin , if I can call someone for help if I get stuck.",
+            "AT2: Blockchain / Cryptocurrency Coin makes effort more interesting."
         ],
         "corr_dict": {
-            "SE1": {
-                "SE1": 1.0,
-                "FC3": null,
-                "EE1": null
+            "FC4": {
+                "FC4": 0.9999999999999992,
+                "SE2": null,
+                "AT2": null
             },
-            "FC3": {
-                "SE1": 0.5365611986075159,
-                "FC3": 1.0,
-                "EE1": null
+            "SE2": {
+                "FC4": 0.5623610450360287,
+                "SE2": 0.9999999999999994,
+                "AT2": null
             },
-            "EE1": {
-                "SE1": 0.6711056982203533,
-                "FC3": 0.5837298750514555,
-                "EE1": 1.0
+            "AT2": {
+                "FC4": 0.5741514590191188,
+                "SE2": 0.5737328276234357,
+                "AT2": 1.0
             }
         }
     }

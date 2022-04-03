@@ -1,38 +1,38 @@
 {
     "Precision": {
-        "Decision Tree": 0.5912962962962963,
-        "Decision Tree (IFS)": 0.68,
-        "Decision Tree (NIFS)": 0.622811059907834,
-        "Decision Tree (UFS)": 0.708974358974359
+        "Decision Tree": 0.3905038759689923,
+        "Decision Tree (IFS)": 0.3942671714440238,
+        "Decision Tree (NIFS)": 0.4677080414681984,
+        "Decision Tree (UFS)": 0.4852415026833632
     },
     "Recall": {
-        "Decision Tree": 0.5888888888888889,
-        "Decision Tree (IFS)": 0.6444444444444445,
-        "Decision Tree (NIFS)": 0.6,
-        "Decision Tree (UFS)": 0.6888888888888889
+        "Decision Tree": 0.5,
+        "Decision Tree (IFS)": 0.627906976744186,
+        "Decision Tree (NIFS)": 0.5930232558139535,
+        "Decision Tree (UFS)": 0.5697674418604651
     },
     "F1-Score": {
-        "Decision Tree": 0.5772571444828518,
-        "Decision Tree (IFS)": 0.625974025974026,
-        "Decision Tree (NIFS)": 0.5853136155022948,
-        "Decision Tree (UFS)": 0.6745098039215686
+        "Decision Tree": 0.4310528541226216,
+        "Decision Tree (IFS)": 0.4843853820598007,
+        "Decision Tree (NIFS)": 0.4635956430472224,
+        "Decision Tree (UFS)": 0.4774674529876489
     },
     "Accuracy Score": {
-        "Decision Tree": 59.61904761904761,
-        "Decision Tree (IFS)": 62.57142857142857,
-        "Decision Tree (NIFS)": 61.095238095238095,
-        "Decision Tree (UFS)": 59.57142857142857
+        "Decision Tree": 57.76315789473684,
+        "Decision Tree (IFS)": 66.78947368421053,
+        "Decision Tree (NIFS)": 68.42105263157895,
+        "Decision Tree (UFS)": 63.289473684210535
     },
     "MCC": {
-        "Decision Tree": 0.1730192920116533,
-        "Decision Tree (IFS)": 0.322490309931942,
-        "Decision Tree (NIFS)": 0.2251294635319326,
-        "Decision Tree (UFS)": 0.38655503354120735
+        "Decision Tree": -0.08886403030985228,
+        "Decision Tree (IFS)": 0.0,
+        "Decision Tree (NIFS)": 0.0707859806331861,
+        "Decision Tree (UFS)": -0.03681486395744456
     },
     "Time Taken": {
         "Decision Tree": 0.046875,
-        "Decision Tree (IFS)": 0.046875,
-        "Decision Tree (NIFS)": 0.03125,
+        "Decision Tree (IFS)": 0.03125,
+        "Decision Tree (NIFS)": 0.046875,
         "Decision Tree (UFS)": 0.03125
     }
 }

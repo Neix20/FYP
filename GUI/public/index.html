@@ -121,7 +121,8 @@
 
             for (let key in dict) {
                 let val = dict[key];
-                str += `<td>${parseFloat(val).toFixed(2)}</td>`;
+                let output = (val == null) ? "" : `${parseFloat(val).toFixed(2)}`;
+                str += `<td>${output}</td>`;
             }
 
             return `<tr>${str}</tr>`;
@@ -474,6 +475,7 @@
             for (feat of feature_arr) {
                 $(id).append(gen_feat_checkbox(name, feat));
             }
+            $(id).append(gen_feat_checkbox(name, "None"));
 
             id = "#utaut_feat_block";
             name = "utaut_features";
@@ -574,7 +576,7 @@
             });
 
             name = "filter_features";
-            $(`input[name='${name}']`).slice(12, 28).each(function() {
+            $(`input[name='${name}']`).slice(-1).each(function() {
                 this.checked = true;
             });
 

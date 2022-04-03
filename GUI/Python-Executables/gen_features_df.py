@@ -8,6 +8,10 @@ targeted_feature = sys.argv[3]
 utaut_feature = sys.argv[4]
 
 filter_feature = filter_feature.split("->")
+
+if filter_feature == ["None"]:
+    filter_feature = []
+
 targeted_feature = targeted_feature.split("->")
 utaut_feature = utaut_feature.split("->")
 
@@ -61,6 +65,8 @@ for feat in filter_feature_df.columns:
         feature_dict[feat] = tmp_df.columns.tolist()
         tmp_df.columns = [f"{feat}->{val}" for val in tmp_df.columns]
         arr_df.append(tmp_df)
+        
+feature_dict["None"] = ["None"]
         
 filter_feature_res_df.columns = [f"{feat}->None" for feat in filter_feature_res_df.columns]
         

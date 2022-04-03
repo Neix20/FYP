@@ -101,7 +101,6 @@ router.post("/genViz", (req, res) => {
     python = spawn.spawnSync('python', ['Python-Executables\\gen_viz.py', filter_feature, target_feature]);
 
     console.log(python.stdout.toString());
-
     return res.status(200).json({ msg: "Successfully Generated filter-target-graph.jpeg!" });
 });
 
@@ -120,6 +119,16 @@ router.post("/genTrainTest", (req, res) => {
     // fs.writeFileSync(`LogFile\\genTrainTest\\${logFileName}`, command);
 
     // Execute Command
+    // python = spawn.spawn('python', ['Python-Executables\\gen_train_test_df.py', filter_feature, target_feature, utaut_feature]);
+
+    // python.stdout.on("data", data => {
+    //     console.log(data.toString());
+    // })
+
+    // python.stderr.on("data", data => {
+    //     console.error(data.toString());
+    // });
+
     python = spawn.spawnSync('python', ['Python-Executables\\gen_train_test_df.py', filter_feature, target_feature, utaut_feature]);
 
     console.log(python.stdout.toString());
